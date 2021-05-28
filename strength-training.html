@@ -5,35 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Living In Motion</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
     <h1>Title</h1>
     <p>Instructions</p>
 
-    <form id="formName" action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
-
-        <input type="checkbox" id="9" name="legs" value="9">
-        <label for="legs"> Legs</label><br>
-
-        <input type="checkbox" id="11" name="chest" value="11">
-        <label for="chest"> Chest</label><br>
-
-        <input type="checkbox" id="13" name="shoulders" value="13">
-        <label for="shoulders"> Shoulders</label><br>
-
-        <input type="checkbox" id="8" name="arms" value="8">
+    <form id="formName">       
+        <input type="checkbox" id="8" name="chosen" value="Arms">
         <label for="arms"> Arms</label><br>
-
-        <input type="checkbox" id="12" name="back" value="12">
+        
+        <input type="checkbox" id="12" name="chosen" value="Back">
         <label for="back"> Back</label><br>
 
-        <input type="checkbox" id="10" name="core" value="10">
+        <input type="checkbox" id="10" name="chosen" value="Abs">
         <label for="core"> Core</label><br>
+        
+        <input type="checkbox" id="11" name="chosen" value="Chest">
+        <label for="chest"> Chest</label><br>
 
-        <input type="submit" name="submit" value="Submit" />
+        <input type="checkbox" id="9" name="chosen" value="Legs">
+        <label for="legs"> Legs</label><br>
+
+        <input type="checkbox" id="13" name="chosen" value="Shoulders">
+        <label for="shoulders"> Shoulders</label><br>
+
+        <input id="chosen-button" type="submit" name="submit" value="Submit" />
     </form>
+    
+    <div id="exercise-container">
+        <form id="list-of-exercises"></form>
+    </div>
+
+    <div id="test"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="./assets/script.js"></script>
 
 </body>
 
