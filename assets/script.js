@@ -77,12 +77,23 @@ function renderCollection(collection) {
       labelEl.className = "row checkbox-container";
       listOfExercisesEl.appendChild(labelEl);
       labelEl.prepend(inputEl);
+      
     }
   } 
+  var chooseDateBtn = document.querySelector("#choose-date");
+  chooseDateBtn.classList.remove("hide");
+  
+  chooseDateBtn.addEventListener("click", function(){
+  localStorage.setItem(slicedExercises.name, JSON.stringify(inputEl.checked)); 
+});
 }
+
 
 const chosenBtnEl = document.querySelector('#chosen-button');
 chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
+
+
+
 
 // startBtnEl.addEventListener('click', )
 
