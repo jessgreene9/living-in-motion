@@ -80,12 +80,9 @@ function renderCollection(collection) {
       listOfExercisesEl.appendChild(labelEl);
       labelEl.prepend(inputEl);
 
-    }
-  }
 
-  // var chooseDateBtn = document.querySelector("#choose-date");
-  // chooseDateBtn.classList.remove("hide");
-  // chooseDateBtn.setAttribute("id","merge_button");
+
+ 
 
   // $("#merge_button").click(function(event){
   //   event.preventDefault();
