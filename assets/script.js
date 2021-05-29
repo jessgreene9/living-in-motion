@@ -55,39 +55,34 @@ function getSelectedCheckboxValues(event) {
             results: value
           }
         });
-        // return(collection); 
-        // var shCollection = _.shuffle(collection);
         renderCollection(collection);
       });
     });
 }
 
-
 function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
-    for (var i = 0; i < collection[c].results.length; i++) { 
+    var shuffledExercises = _.shuffle(collection[c].results);
+    var slicedExercises = shuffledExercises.slice(0, 10);
+    console.log(slicedExercises);
+
+    for (var i = 0; i < slicedExercises.length; i++) { 
       var inputEl = document.createElement("input");
       inputEl.setAttribute("type", "checkbox");
       inputEl.className = "exercises";
       // console.log(collection[c].results[i]);
       var labelEl = document.createElement("label");
-      labelEl.textContent = collection[c].results[i].name;
+      labelEl.textContent = slicedExercises[i].name;
       labelEl.className = "row checkbox-container";
       listOfExercisesEl.appendChild(labelEl);
       labelEl.prepend(inputEl);
     }
-    var shCollection = _.shuffle(collection[c].results);
-    console.log(shCollection);
-    rendershCollection(); 
   } 
 }
 
-function rendershCollection(shCollection) {
-  var list2Exercise = document.querySelector("#test");
-  for (var i = 0; i < 15; i++) {
-  }
-}
 const chosenBtnEl = document.querySelector('#chosen-button');
 chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
+
+// startBtnEl.addEventListener('click', )
 
