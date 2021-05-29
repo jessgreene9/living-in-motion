@@ -64,14 +64,13 @@ function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
     var shuffledExercises = _.shuffle(collection[c].results);
-    var slicedExercises = shuffledExercises.slice(0, 10);
+    var slicedExercises = shuffledExercises.slice(0, 15);
     console.log(slicedExercises);
 
     for (var i = 0; i < slicedExercises.length; i++) { 
       var inputEl = document.createElement("input");
       inputEl.setAttribute("type", "checkbox");
       inputEl.className = "exercises";
-      // console.log(collection[c].results[i]);
       var labelEl = document.createElement("label");
       labelEl.textContent = slicedExercises[i].name;
       labelEl.className = "row checkbox-container";
