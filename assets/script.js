@@ -67,49 +67,50 @@ function renderCollection(collection) {
     var slicedExercises = shuffledExercises.slice(0, 15);
     console.log(slicedExercises);
 
-    for (var i = 0; i < slicedExercises.length; i++) { 
+    for (var i = 0; i < slicedExercises.length; i++) {
       var inputEl = document.createElement("input");
       inputEl.setAttribute("type", "checkbox");
       inputEl.className = "exercises";
       inputEl.setAttribute("name", "name");
       var labelEl = document.createElement("label");
       labelEl.textContent = slicedExercises[i].name;
-      labelEl.className = "row checkbox-container"; 
+      labelEl.className = "row checkbox-container";
       labelEl.setAttribute("id", "labelId");
       labelEl.setAttribute("value", "slicedExercises[i].name");
       listOfExercisesEl.appendChild(labelEl);
       labelEl.prepend(inputEl);
-      
+
     }
-  } 
-  var chooseDateBtn = document.querySelector("#choose-date");
-  chooseDateBtn.classList.remove("hide");
-  chooseDateBtn.setAttribute("id","merge_button");
-  
-  $("#merge_button").click(function(event){
-    event.preventDefault();
-    var searchIDs = [];
-    $("#labelId input:checkbox:checked").map(function(){
-        searchIDs.push($(this).val());
-    });
-    console.log(searchIDs);
-  });
+  }
+
+  // var chooseDateBtn = document.querySelector("#choose-date");
+  // chooseDateBtn.classList.remove("hide");
+  // chooseDateBtn.setAttribute("id","merge_button");
+
+  // $("#merge_button").click(function(event){
+  //   event.preventDefault();
+  //   var searchIDs = [];
+  //   $("#labelId input:checkbox:checked").map(function(){
+  //       searchIDs.push($(this).val());
+  //   });
+  //   console.log(searchIDs);
+  // });
 
 
-//   chooseDateBtn.addEventListener("click", function(){
-   
-//     // var searchIds = [];
-//     // var checkedEl= document.querySelector('.exercises').checked;
-//     var searchIDs = [];
-//   $(".exercises input:checkbox:checked").map(function(){
-//     searchIDs.push($(this).val());
-//   });
-//   console.log(searchIDs);
-// });
+  //   chooseDateBtn.addEventListener("click", function(){
+
+  //     // var searchIds = [];
+  //     // var checkedEl= document.querySelector('.exercises').checked;
+  //     var searchIDs = [];
+  //   $(".exercises input:checkbox:checked").map(function(){
+  //     searchIDs.push($(this).val());
+  //   });
+  //   console.log(searchIDs);
+  // });
 
   //  console.log(searchIds);
-    
-    // localStorage.setItem("exercise", JSON.stringify(checkedEl)); 
+
+  // localStorage.setItem("exercise", JSON.stringify(checkedEl)); 
   // var checkedValue = null; 
   // var inputElements = document.querySelector('.exercises');
   // for(var i=0; inputElements[i]; ++i){
@@ -117,7 +118,7 @@ function renderCollection(collection) {
   //            checkedValue = inputElements[i].value;
   //            break;
   //       }
-        // console.log("hello");
+  // console.log("hello");
   // }
 
   // var checkedValue = document.querySelector(labelEl.checked).value;
@@ -128,8 +129,8 @@ function renderCollection(collection) {
   //   {
   //       if (checkbox.checked) {
   //           inputEl.append(checkbox.value + ' ');
-    //     }
-    // }
+  //     }
+  // }
 };
 
 //   // var exerciseLabel = labelEl.value
@@ -154,4 +155,5 @@ chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
 
 
 // startBtnEl.addEventListener('click', )
+
 

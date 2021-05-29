@@ -11,15 +11,11 @@
 </head>
 
 <body>
-    <header>
-
-    </header>
     <nav class="navbar has-shadow is-white">
         <!-- logo / brand -->
-        <div class="navbar-brand">
+        <div class="navbar-brand" id="home">
             <a href="#" class="navbar-item">
-                <img src="./assets/images/linkedin_banner_image_2.jpg" alt="" style="max-height: 70px"
-                    class="py-2 px-2">
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 100px" class="py-2 px-2">
             </a>
             <a class="navbar-burger" id="burger">
                 <span></span>
@@ -29,9 +25,9 @@
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <a class="navbar-item" href="#">Design Your Workout</a>
-                <a class="navbar-item" href="#">Weekly Planner</a>
-                <a class="navbar-item" href="#">Contact Us</a>
+                <a class="navbar-item is-size-4 pr-6" href="#design-a-workout">Design Your Workout</a>
+                <a class="navbar-item is-size-4 pr-6" href="#weekly-planner">Weekly Planner</a>
+                <a class="navbar-item is-size-4 pr-4 mr-4" href="#connect">Connect</a>
             </div>
         </div>
     </nav>
@@ -39,22 +35,141 @@
 
     <img class="hero"></img>
 
+    <a  href="#home"><button id="sticky" class="button is-left mr-4 is-pulled-right">Return to Top</button></a>
+    
     <section class="section">
         <div class="container">
+            <div id="design-a-workout" class="row has-text-centered">
+                <h1 class="has-text-white is-size-2 mb-4 py-4">Design A Custom Workout</h1>
+                <p class="has-text-white is-size-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus quibusdam consequatur at alias labore ipsa nisi itaque delectus iste, ex laborum vel
+                    molestiae laudantium? Reprehenderit asperiores modi distinctio. Labore, in?</p>
+            </div>
             <div class="columns">
                 <div class="column">
-                    <a href="./strength-training.html">
-                        <img class="design-images" src="assets/images/kettleball.png"
-                            alt="a man working out next to a kettleball">
-                        <p>Strength Training</p>
+                    <a class="card" href="./strength-training.html">
+                        <figure class="card-image">
+                            <img src="assets/images/kettleball.png" alt="a man working out next to a kettleball">
+                        </figure>
+                        <div class="card-content is-overlay">
+                            <span class="tag is-primary is-large has-text-weight-bold">Strength Training</span>
+                        </div>
                     </a>
                 </div>
                 <div class="column">
-                    <a href="./cardio.html">
-                        <img class="design-images" src="./assets/images/running-mountain.png"
-                            alt="a woman running up a mountain">
-                        <p>Cardio Training</p>
+                    <a class="card" href="./cardio.html">
+                        <figure class="card-image">
+                            <img src="assets/images/running-mountain.png" alt="a woman running up the mountain">
+                        </figure>
+                        <div class="card-content is-overlay">
+                            <span class="tag is-primary is-large has-text-weight-bold">Cardio Training</span>
+                        </div>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="weekly-planner">
+        <div class="container">
+            <h1 class="title has-text-centered has-text-white is-size-1 my-4 py-4">Weekly Planner</h1>
+            <div class="columns">
+                <div class="column">
+                    <div id="day-card" class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Sunday
+                            </p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <a href="#" alt="Placeholder image"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="day-card" class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Monday
+                            </p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <a href="#" alt="Placeholder image"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="day-card" class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Tuesday
+                            </p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <a href="#" alt="Placeholder image"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="day-card" class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Wednesday
+                            </p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <a href="#" alt="Placeholder image"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="day-card" class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Thursday
+                            </p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <a href="#" alt="Placeholder image"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="day-card" class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Friday
+                            </p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <a href="#" alt="Placeholder image"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="day-card" class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Saturday
+                            </p>
+                        </header>
+                        <div class="card-image">
+                            <figure class="image is-1by1">
+                                <a href="#" alt="Placeholder image"></a>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,13 +178,52 @@
     <div id="weather">
 
     </div>
-    <footer>
-        <ul>
-            <li>Email</li>
-            <li>Phone</li>
-        </ul>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns mb-6">
+                <div class="column is-3 pt-6 mr-6">
+                    <img src="assets/images/living-in-motion-logo.JPG">
+                </div>
+                <div class="column is-5 pt-5">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dignissimos dolores tempore beatae
+                        aliquid est, magni ipsa, omnis reiciendis nihil repudiandae! Voluptates amet, esse culpa cumque
+                        dolorem laboriosam molestiae? Error?</p>
+                </div>
+                <div class="column is-2">
+                    <h1 id="page-links"class="is-size-5">Explore</h1>
+                    <a href="#home">Home</a><br>
+                    <a href="#design-a-workout">Design A Workout</a><br>
+                    <a href="#weekly-planner">Weekly Planner</a>
+                </div>
+                <div class="column is-2">
+                    <h1 class="is-size-5" id="connect">Connect</h1>
+                    <h2>Jess Greene</h2>
+                    <ul id="page-links">
+                        <li>
+                            <a href="#">GitHub</a>
+                        </li>
+                        <li>
+                            <a href="#">LinkedIn</a>
+                        </li>
+                    </ul><br>
+                    <h2>Alexandra Hurst</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Github</a>
+                        </li>
+                        <li>
+                            <a href="#">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row has-text-centered">&copy; 2021 Alexandra Hurst & Jess Greene</div>
+        </div>
     </footer>
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./index.js"></script>
 <script src="./assets/script.js"></script>
