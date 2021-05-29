@@ -142,7 +142,6 @@ function renderCollection(collection) {
 const chosenBtnEl = document.querySelector('#chosen-button');
 chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
 
-
 // mobile menu
 
 // var burgerIconEl = document.querySelector("#burger");
@@ -151,6 +150,7 @@ chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
 // burgerIconEl.addEventListener("click", () => {
 //     navbarMenuEl.classList.toggle("is-active");
 // });
+
 
 
 // startBtnEl.addEventListener('click', )
