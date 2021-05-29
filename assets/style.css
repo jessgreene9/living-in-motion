@@ -1,3 +1,30 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 .checkbox-container {
     display: block;
+}
+
+body {
+    background-color: #393c40ff;
+}
+
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("./images/dumbbells.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.design-images {
+   
+}
+
+.design-workout-selections {
+
 }
