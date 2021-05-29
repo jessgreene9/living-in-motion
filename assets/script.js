@@ -60,7 +60,6 @@ function getSelectedCheckboxValues(event) {
     });
 }
 
-
 function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
@@ -83,4 +82,6 @@ function renderCollection(collection) {
 
 const chosenBtnEl = document.querySelector('#chosen-button');
 chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
+
+// startBtnEl.addEventListener('click', )
 
