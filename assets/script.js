@@ -82,19 +82,28 @@ function renderCollection(collection) {
       
     }
   } 
-  var chooseDateBtn = document.querySelector("#choose-date");
-  chooseDateBtn.classList.remove("hide");
-  chooseDateBtn.setAttribute("id","merge_button");
   
-  $("#merge_button").click(function(event){
-    event.preventDefault();
-    var searchIDs = [];
-    $("#labelId input:checkbox:checked").map(function(){
-        searchIDs.push($(this).val());
-    });
-    console.log(searchIDs);
-  });
+  function getCheckboxLabel(checkbox) {
+    if (checkbox.parentNode.tagName === 'LABEL') {
+        return checkbox.parentNode
+    }
+    if (checkbox.id) {
+        return document.querySelector('label[for="' + checkbox.id + '"]')
+    }
+}
 
+
+
+  // var chooseDateBtn = document.querySelector("#choose-date");
+  // chooseDateBtn.classList.remove("hide");
+  // chooseDateBtn.setAttribute("id","merge_button");
+  // chooseDateBtn.addEventListener("click", function(){
+  // var selectedCheckboxes = document.querySelectorAll('#labelId checkbox:checked');
+  // var searchIds = selectedCheckboxes.map(function(checkbox) {
+  //   return checkbox.id;
+  // });
+  // console.log(searchIds); 
+  // })
 
 //   chooseDateBtn.addEventListener("click", function(){
    
