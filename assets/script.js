@@ -64,14 +64,13 @@ function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
     var shuffledExercises = _.shuffle(collection[c].results);
-    var slicedExercises = shuffledExercises.slice(0, 10);
+    var slicedExercises = shuffledExercises.slice(0, 15);
     console.log(slicedExercises);
 
     for (var i = 0; i < slicedExercises.length; i++) { 
       var inputEl = document.createElement("input");
       inputEl.setAttribute("type", "checkbox");
       inputEl.className = "exercises";
-      // console.log(collection[c].results[i]);
       var labelEl = document.createElement("label");
       labelEl.textContent = slicedExercises[i].name;
       labelEl.className = "row checkbox-container";
@@ -92,8 +91,19 @@ function renderCollection(collection) {
 const chosenBtnEl = document.querySelector('#chosen-button');
 chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
 
+<<<<<<< HEAD
 
 
+=======
+// mobile menu
+
+var burgerIconEl = document.querySelector("#burger");
+var navbarMenuEl = document.querySelector("#nav-links");
+
+burgerIconEl.addEventListener("click", () => {
+    navbarMenuEl.classList.toggle("is-active");
+});
+>>>>>>> main
 
 // startBtnEl.addEventListener('click', )
 
