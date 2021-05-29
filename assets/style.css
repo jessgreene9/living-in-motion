@@ -8,6 +8,36 @@
     display: block;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+.hide {
+    display: none;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td {
+    padding: 15px;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  td {
+      height:50px;
+      width: 50px;
+  }
+
+  
+=======
+=======
+>>>>>>> main
 body {
     background-color: #393c40ff;
 }
@@ -27,4 +57,9 @@ body {
 
 .design-workout-selections {
 
+<<<<<<< HEAD
 }
+>>>>>>> main
+=======
+}
+>>>>>>> main
