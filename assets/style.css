@@ -9,7 +9,6 @@
 }
 
 
-
 .hide {
     display: none;
 }
@@ -32,14 +31,13 @@ table, th, td {
       width: 50px;
   }
 
-  
 
 body {
     background-color: #393c40ff;
 }
 
 .hero {
-    height: 800px;
+    height: 600px;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("./images/dumbbells.png");
@@ -47,10 +45,22 @@ body {
     background-position: center;
 }
 
-.design-images {
-   
+design-images {
+    width: 100%;
 }
 
-.design-workout-selections {
+bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
 
+#day-card {
+    box-shadow: -12px -12px 5px rgb(34, 33, 33);
+}
+
+#sticky {
+    position: sticky;
+    top: 0;
+    box-shadow: -5px -5px 5px rgb(34, 33, 33);
 }
