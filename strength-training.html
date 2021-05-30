@@ -6,44 +6,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living In Motion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-    <h1>Title</h1>
-    <p>Instructions</p>
+    <nav class="navbar has-shadow is-white">
+        <!-- logo / brand -->
+        <div class="navbar-brand" id="home">
+            <a href="#" class="navbar-item">
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 100px" class="py-2 px-2">
+            </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <!-- <a class="navbar-item is-size-4 pr-6" href="./homepage.html">Home</a> -->
+                <a class="navbar-item is-size-4 pr-6" href="#weekly-planner">Weekly Planner</a>
+                <a class="navbar-item is-size-4 pr-4 mr-4" href="#connect">Connect</a>
+            </div>
+        </div>
+    </nav>
 
-    <form id="formName">       
-        <input type="checkbox" id="8" name="chosen" value="Arms">
-        <label for="arms"> Arms</label><br>
-        
-        <input type="checkbox" id="12" name="chosen" value="Back">
-        <label for="back"> Back</label><br>
+    <section class="section">
+        <div class="container">
+            <h1 id="selection-title" class="title has-text-centered has-text-white is-size-1">Select Your Muscle Groups
+            </h1>
+            <div id="formName">
+                <div class="columns is-multiline">
+                    <div class="column is-one-third">
+                        <input type="checkbox" id="8" name="chosen" value="Arms">
+                        <label for="8"><img src="./assets/images/arms-exercise2.jpg"
+                                alt="Man performing a bicep curl. Photo by Daniel Apodaca on Unsplash" /></label>
+                    </div>
+                    <div class="column is-one-third">
+                        <input type="checkbox" id="12" name="chosen" value="Back">
+                        <label for="12"><img src="./assets/images/back-exercise.jpg"
+                                alt="Photo of woman's back. Photo by Scott Webb on Unsplash" /></label>
+                    </div>
+                    <div class="column is-one-third">
+                        <input type="checkbox" id="10" name="chosen" value="Core">
+                        <label for="10"><img src="./assets/images/abs-exercise.jpg"
+                                alt="Woman performing ab rolls. Photo by Jonathan Borba on Unsplash" /></label>
+                    </div>
+                    <div class="column is-one-third">
+                        <input type="checkbox" id="11" name="chosen" value="Chest">
+                        <label for="11"><img src="./assets/images/chest-exercise.jpg"
+                                alt="Woman performing barbell bench press. Photo by Alora Griffiths on Unsplash" /></label>
+                    </div>
+                    <div class="column is-one-third">
+                        <input type="checkbox" id="9" name="chosen" value="Legs">
+                        <label for="9"><img src="./assets/images/legs-exercise.jpg"
+                                alt="Photo of woman's back. Photo by Scott Webb on Unsplash" /></label>
+                    </div>
+                    <div class="column is-one-third">
+                        <input type="checkbox" id="13" name="chosen" value="Shoulders">
+                        <label for="13"><img src="./assets/images/shoulders-exercise.jpg"
+                                alt="Profile photo of woman. Photo by Scott Webb on Unsplash" /></label>
+                    </div>
+                    <div class="column is-centered">
+                        <input class="button is-large has-text-darkgrey has-text-weight-bold" id="chosen-button"
+                            type="submit" name="submit" value="Proceed to Exercises" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <input type="checkbox" id="10" name="chosen" value="Abs">
-        <label for="core"> Core</label><br>
-        
-        <input type="checkbox" id="11" name="chosen" value="Chest">
-        <label for="chest"> Chest</label><br>
+        <div id="exercise-container">
+            <form id="list-of-exercises">
+            </form>
+            <input class="hide" type="Submit" id="choose-date" value="Choose Date" />
 
-        <input type="checkbox" id="9" name="chosen" value="Legs">
-        <label for="legs"> Legs</label><br>
-
-        <input type="checkbox" id="13" name="chosen" value="Shoulders">
-        <label for="shoulders"> Shoulders</label><br>
-
-        <input id="chosen-button" type="submit" name="submit" value="Submit" />
-    </form>
-    
-    <div id="exercise-container">
-        <form id="list-of-exercises">
-        </form>
-        <input class= "hide" type="Submit" id= "choose-date" value="Choose Date"/>
-        
-    </div>
+        </div>
+    </section>
 
     <div id="test"></div>
-    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns mb-6">
+                <div class="column is-3 pt-6 mr-6">
+                    <img src="assets/images/living-in-motion-logo.JPG">
+                </div>
+                <div class="column is-5 pt-5">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dignissimos dolores tempore
+                        beatae
+                        aliquid est, magni ipsa, omnis reiciendis nihil repudiandae! Voluptates amet, esse culpa
+                        cumque
+                        dolorem laboriosam molestiae? Error?</p>
+                </div>
+                <div class="column is-2">
+                    <h1 id="page-links" class="is-size-5">Explore</h1>
+                    <a href="#home">Home</a><br>
+                    <a href="#design-a-workout">Design A Workout</a><br>
+                    <a href="#weekly-planner">Weekly Planner</a>
+                </div>
+                <div class="column is-2">
+                    <h1 class="is-size-5" id="connect">Connect</h1>
+                    <h2>Jess Greene</h2>
+                    <ul id="page-links">
+                        <li>
+                            <a href="#">GitHub</a>
+                        </li>
+                        <li>
+                            <a href="#">LinkedIn</a>
+                        </li>
+                    </ul><br>
+                    <h2>Alexandra Hurst</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Github</a>
+                        </li>
+                        <li>
+                            <a href="#">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row has-text-centered">&copy; 2021 Alexandra Hurst & Jess Greene</div>
+        </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="./assets/script.js"></script>
