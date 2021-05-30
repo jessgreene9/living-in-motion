@@ -141,15 +141,18 @@ function renderCollection(collection) {
               // }
             }
           }
+          // function getCheckboxLabel() {
+            // }};
+          }
+
+          function getInnerText(labelName, label){
           let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
-          let label= document.querySelectorAll("label");
-          console.log(label);
+          let labels= document.querySelectorAll("label");
+          console.log(labels);
           console.log(checkboxes);
-          if (checkboxes) {
-            console.log(data.label.innerText);  
-        }}
-        // function getCheckboxLabel() {
-          // }};
+          var labelText = label.label.innerText;
+          console.log(labelText);  
+          if (checkboxes) {}};
           // var selectedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
           // var searchIds = selectedCheckboxes.map(function(checkbox) {
             //   return checkbox.label;
@@ -161,8 +164,8 @@ function renderCollection(collection) {
           // localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked));
           // });
           
-          chooseDateBtn.addEventListener("click", (getCheckboxLabel));
-          function getCheckboxLabel(){};
+          chooseDateBtn.addEventListener("click", (getInnerText));
+          // function getCheckboxLabel(){};
 
 
 
