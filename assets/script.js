@@ -1,9 +1,9 @@
 var apiKey = "867ee0b8397845db43d24c7003e387b5742e2bdc";
 var startBtnEl = document.querySelector("#start");
 var workoutContainerEl = document.querySelector("#workout-container");
+var chooseDateBtn = document.querySelector("#choose-date");
 
 var categories = ["Cardio", "Core", "Upper Body", "Lower Body"];
-
 
 function getSelectedCheckboxValues(event) {
   event.preventDefault();
@@ -19,32 +19,36 @@ function getSelectedCheckboxValues(event) {
   fetch(catUrl, {
     headers: {
       Accept: "application/json",
-      Authorization: "Token 867ee0b8397845db43d24c7003e387b5742e2bdc"
-    }
+      Authorization: "Token 867ee0b8397845db43d24c7003e387b5742e2bdc",
+    },
   })
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      var selectedCategories = data.results.filter(category => chosen.includes(category.name));
+      var selectedCategories = data.results.filter((category) =>
+        chosen.includes(category.name)
+      );
       console.log(selectedCategories);
 
       var exercises = selectedCategories.map(function (category) {
-        var url = "https://wger.de/api/v2/exercise/?language=2&limit=100&category=" + category.id;
+        var url =
+          "https://wger.de/api/v2/exercise/?language=2&limit=100&category=" +
+          category.id;
 
         return fetch(url, {
           headers: {
             Accept: "application/json",
-            Authorization: "Token 867ee0b8397845db43d24c7003e387b5742e2bdc"
-          }
+            Authorization: "Token 867ee0b8397845db43d24c7003e387b5742e2bdc",
+          },
         })
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
             return data.results;
-          })
-      })
+          });
+      });
 
       console.log(exercises);
 
@@ -52,8 +56,8 @@ function getSelectedCheckboxValues(event) {
         var collection = values.map(function (value, index) {
           return {
             title: selectedCategories[index].name,
-            results: value
-          }
+            results: value,
+          };
         });
         renderCollection(collection);
       });
@@ -66,7 +70,7 @@ function renderCollection(collection) {
     var shuffledExercises = _.shuffle(collection[c].results);
     var slicedExercises = shuffledExercises.slice(0, 20);
     console.log(slicedExercises);
-
+    
     for (var i = 0; i < slicedExercises.length; i++) {
       var inputEl = document.createElement("input");
       inputEl.setAttribute("type", "checkbox");
@@ -79,7 +83,96 @@ function renderCollection(collection) {
       labelEl.setAttribute("value", "slicedExercises[i].name");
       listOfExercisesEl.appendChild(labelEl);
       labelEl.prepend(inputEl);
+      
+      chooseDateBtn.classList.remove("hide");
+      
+      //   function getCheckboxLabel(checkbox) {
+        //     if (checkbox.parentNode.tagName === 'LABEL') {
+          //         return checkbox.parentNode
+          //     }
+          //     if (checkbox.id) {
+            //         return document.querySelector('label[for="' + checkbox.id + '"]')
+            //     }
+            
+            // }
+            
+            // $("#merge_button").click(function(event){
+              //   event.preventDefault();
+              //   var searchIDs = [];
+              //   $("#labelId input:checkbox:checked").map(function(){
+                //       searchIDs.push($(this).val());
+          //   });
+          //   console.log(searchIDs);
+          // });
+          
+          //   chooseDateBtn.addEventListener("click", function(){
+            
+            //     // var searchIds = [];
+            //     // var checkedEl= document.querySelector('.exercises').checked;
+            //     var searchIDs = [];
+            //   $(".exercises input:checkbox:checked").map(function(){
+              //     searchIDs.push($(this).val());
+              //   });
+              //   console.log(searchIDs);
+              // });
+              
+              //  console.log(searchIds);
+              
+              // localStorage.setItem("exercise", JSON.stringify(checkedEl));
+              // var checkedValue = null;
+              // var inputElements = document.querySelector('.exercises');
+              // for(var i=0; inputElements[i]; ++i){
+                //       if(inputElements[i].checked){
+                  //            checkedValue = inputElements[i].value;
+                  //            break;
+        //       }
+        // console.log("hello");
+        // }
+        
+        // var checkedValue = document.querySelector(labelEl.checked).value;
+        // console.log(checkedValue);
+        // document.querySelector(".exercises").onclick = function() {
+          //   var checkboxes = document.getElementsByName('name');
+          //   for (var checkbox of checkboxes)
+          //   {
+            //       if (checkbox.checked) {
+              //           inputEl.append(checkbox.value + ' ');
+              //     }
+              // }
+            }
+          }
+          // function getCheckboxLabel() {
+            // }};
+          }
 
+
+          function getInnerText(labelName, label){
+          let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
+          let labels= document.querySelectorAll("label");
+          console.log(labels);
+          console.log(checkboxes);
+          var labelText = label.label.innerText;
+          console.log(labelText);  
+          if (checkboxes) {}};
+          // var selectedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
+          // var searchIds = selectedCheckboxes.map(function(checkbox) {
+            //   return checkbox.label;
+            // });
+            // console.log(searchIds); 
+            
+            // var exerciseLabel = labelEl.value
+          
+          // localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked));
+          // });
+          
+          chooseDateBtn.addEventListener("click", (getInnerText));
+          // function getCheckboxLabel(){};
+
+
+
+const chosenBtnEl = document.querySelector("#chosen-button");
+chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues)); 
+=======
 
 
  
@@ -141,6 +234,7 @@ function renderCollection(collection) {
 const chosenBtnEl = document.querySelector('#chosen-button');
 chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
 
+
 // mobile menu
 
 // var burgerIconEl = document.querySelector("#burger");
@@ -149,7 +243,5 @@ chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
 // burgerIconEl.addEventListener("click", () => {
 //     navbarMenuEl.classList.toggle("is-active");
 // });
-
-
 
 // startBtnEl.addEventListener('click', )
