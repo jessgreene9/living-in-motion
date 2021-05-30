@@ -64,7 +64,7 @@ function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
     var shuffledExercises = _.shuffle(collection[c].results);
-    var slicedExercises = shuffledExercises.slice(0, 15);
+    var slicedExercises = shuffledExercises.slice(0, 20);
     console.log(slicedExercises);
 
     for (var i = 0; i < slicedExercises.length; i++) {
@@ -74,7 +74,7 @@ function renderCollection(collection) {
       inputEl.setAttribute("name", "name");
       var labelEl = document.createElement("label");
       labelEl.textContent = slicedExercises[i].name;
-      labelEl.className = "row checkbox-container";
+      labelEl.className = "row checkbox-container has-text-white";
       labelEl.setAttribute("id", "labelId");
       labelEl.setAttribute("value", "slicedExercises[i].name");
       listOfExercisesEl.appendChild(labelEl);
@@ -128,7 +128,8 @@ function renderCollection(collection) {
   //           inputEl.append(checkbox.value + ' ');
   //     }
   // }
-};
+};}
+}
 
 //   // var exerciseLabel = labelEl.value
 //   chooseDateBtn.addEventListener("click", function(){
@@ -152,5 +153,3 @@ chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
 
 
 // startBtnEl.addEventListener('click', )
-
-
