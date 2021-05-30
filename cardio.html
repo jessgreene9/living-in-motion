@@ -1,39 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Living in Motion-Cardio</title>
+    <title>Living in Motion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+
 </head>
+
 <body>
+    <nav class="navbar has-shadow is-white">
+        <!-- logo / brand -->
+        <div class="navbar-brand" id="home">
+            <a href="#" class="navbar-item">
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 100px" class="py-2 px-2">
+            </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <!-- <a class="navbar-item is-size-4 pr-6" href="./homepage.html">Home</a> -->
+                <a class="navbar-item is-size-4 px-4" href="#weekly-planner">Weekly Planner</a>
+                <a class="navbar-item is-size-4 px-4 mx-6" href="#connect">Connect</a>
+            </div>
+        </div>
+    </nav>
 
-    <h1>Choose your Workout!</h1>
-    <form id="cardioForm">       
-        <input type="checkbox" id="mountain" name="chosen" value="Mountain Climbers">
-        <label > Mountain Climbers</label><br>
-        
-        <input type="checkbox" id="sprints" name="chosen" value="Sprints">
-        <label >Sprints</label><br>
+    <section class="section">
+        <div class="container">
 
-        <input type="checkbox" id="jog" name="chosen" value="Jogging">
-        <label > Jogging</label><br>
-        
-        <input type="checkbox" id="burpees" name="chosen" value="Burpees">
-        <label > Burpees</label><br>
+            <h1 id="selection-title" class="title has-text-centered has-text-white is-size-2">Select Your Cardio Workout
+            </h1>
 
-        <input type="checkbox" id="jump-rope" name="chosen" value="Jump Rope">
-        <label > Jump Rope</label><br>
+            <form id="cardio-form">
+                <div class="columns">
+                    <div class="column">
+                        <div id="cardio-card" class="card">
+                            <input type="radio" id="hiit" name="selection" value="hiit">
+                            <label class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
+                                for="hiit">High
+                                Intensity Interval Training</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div id="cardio-card" class="card">
+                            <input type="radio" id="speed" name="selection" value="speed">
+                            <label class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
+                                for="speed">Speed
+                                Training</label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div id="cardio-card" class="card">
+                            <input type="radio" id="distance" name="selection" value="distance">
+                            <label class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
+                                for="distance">Distance Training</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="centered">
+                    <input class="button is-medium has-text-darkgrey has-text-weight-bold" id="cardio-button"
+                        type="submit" name="submit" value="Select Workouts" />
+                </div> -->
+            </form>
+        </div>
+    </section>
 
-        <input type="checkbox" id="stairs" name="chosen" value="Stairs">
-        <label > Stairs</label><br>
+    <section class="section">
+        <div class="container" id="hiit-show" style="display:none">
+            <div class="columns is-multiline">
+                <div class="column is-one-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-size-4 is-centered">
+                                Burpee Interval HIIT Workout
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                The burpee, while dreaded by most is one of the best HIIT exercises you can complete. The full-body exercise engages your core and builds your cardiovascular health throughout the workout. This is another style of workout that utilises AMRAP (As Many Rep As Possible in the allotted time period) To complete the burpee interval HIIT workout;
+                                <ul>
+                                    <li>Perform pull-ups AMRAP for 30 seconds</li>
+                                    <li>Rest for 15 seconds</li>
+                                    <li>Perform jumping jacks AMRAP for 30 seconds</li>
+                                    <li>Rest for 15 seconds</li>
+                                    <li>Perform 20 burpees</li>
+                                    <li>Rest for 30 seconds</li>
+                                    <li>Complete full circuit 4 times</li>
+                                </ul>
+                                <b>Interval:</b> 30 seconds/60 seconds rest<br>
+                                <b>Rounds:</b> 4
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered is-size-4">
+                                The 20/20 Full-Body Cardio HIIT Workout
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                Complete 4-6 rounds through the circuit, working for 20 seconds, resting for 20 seconds as you transition to the next move. Then rest 20-40 seconds between rounds. For the Single Leg Deadlift Hops, alternate sides each round.
+                                <ul>
+                                    <li>Tuck Jump Plank Tucks x 20 seconds</li>
+                                    <li>Rest x 20 seconds</li>
+                                    <li>Plyo Jack Push-Ups x 20 seconds</li>
+                                    <li>Rest x 20 seconds</li>
+                                    <li>Single-Leg Deadlift Hops x 20 seconds</li>
+                                    <li>Rest x 20 seconds</li>
+                                    <li>Plank Skaters x 20 seconds</li>
+                                    <li>Rest x 20 seconds</li>
+                                </ul>
+                                <b>Interval:</b> 20 seconds<br>
+                                <b>Rounds:</b> 4 - 6
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <input type="checkbox" id="bike" name="chosen" value="Cycling">
-        <label > Cycling</label><br>
+        <div class="container" id="distance-show" style="display:none">
+            <div class="columns is-multiline">
+                <div class="column is-one-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered is-size-4">
+                                The Easy Run
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <b>Beginner:</b><br>
+                                Workout: 45 minutes at an easy pace. With this variation, distance doesn’t matter. You’re running for time instead of distance, so there’s no pressure to hit certain mileage.<br>
+                                <b>Advanced:</b><br>
+                                Workout: 6-10 miles at an easy, conversational pace. There should be no set structure or fluctuations in speed, but the hardest part will be resisting the temptation to speed up.
 
-        <input id="chosen-button" type="submit" name="submit" value="Submit" />
-    </form>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered is-size-4">
+                                Tempo Run
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <b>Beginner:</b><br>
+                                Workout: 40 minute run with 3 x 5 minutes at tempo pace, and a 3 minute recovery in between. For this style workout, you’ll start the 40-minute run with an easy warmup, once warm, begin five minute tempo intervals with three minutes of rest, and repeat three times. Allow for time at the end to cool down.<br>
+                                <b>Advanced:</b><br>
+                                Workout: 90 minute run with 3 x 15 minutes at tempo pace, and an 8 minute recovery in between. A workout like this, with longer tempo intervals, is great for marathon racing speed.
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    
+        <div class="container" id="speed-show" style="display:none">
+            <div class="columns is-multiline">
+                <div class="column is-one-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered is-size-4">
+                                Ladder Workout
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                This track workout will help build your speed, confidence, and endurance, no matter what
+                                race distance you're training for. If you're not sure what your 5K (3.1 miles) race pace
+                                is, use a race pace estimate calculator. Beginners should start with one sequence, while
+                                more advanced runners can repeat the sequence once they've worked through it.
+                                <ul>
+                                    <li>Warm-up: 5 minutes at a walk/slow jog</li>
+                                    <li>Work interval: 400 meters (1 lap) at 5K race pace</li>
+                                    <li>Rest interval: Recover (easy pace) 400 meters </li>
+                                    <li>Work interval: 800 meters (2 laps) at 5K race pace</li>
+                                    <li>Rest interval: Recover (easy pace) 400 meters</li>
+                                    <li>Work interval: 1,200 meters (3 laps) at 5K race pace</li>
+                                    <li>Rest interval: Recover (easy pace) 400 meters</li>
+                                    <li>Work interval: 1,600 meters (4 laps) at 5K race pace</li>
+                                    <li>Rest interval: Recover (easy pace) 400 meters</li>
+                                    <li>Cool down: 5 minutes at an easy pace</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                        </footer>
+                    </div>
+                </div>
+                <div class="column is-one-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered is-size-4">
+                                Hill Sprint Workout
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                You’ll need a steep hill about a third of a mile long (or, if you’re on the treadmill,
+                                set it to a 3.5–4.5% incline).
+                                <ul>
+                                    <li>Run ⅓ of the of the hill at a fast pace, then jog down at an easy pace</li>
+                                    <li>Run ⅔ of the hill at a fast pace, then jog down at an easy pace</li>
+                                    <li>Run all the way up the hill at a fast pace, then jog down at an easy pace</li>
+                                       <li>Rest for 2 min.</li>
+                                    <li>4 x 20 sec. sprints up the hill followed by an easy jog down</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">Save</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns mb-6">
+                <div class="column is-3 pt-6 mr-6">
+                    <img src="assets/images/living-in-motion-logo.JPG">
+                </div>
+                <div class="column is-5 pt-5">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dignissimos dolores tempore
+                        beatae
+                        aliquid est, magni ipsa, omnis reiciendis nihil repudiandae! Voluptates amet, esse culpa
+                        cumque
+                        dolorem laboriosam molestiae? Error?</p>
+                </div>
+                <div class="column is-2">
+                    <h1 id="page-links" class="is-size-5">Explore</h1>
+                    <a href="#home">Home</a><br>
+                    <a href="#design-a-workout">Design A Workout</a><br>
+                    <a href="#weekly-planner">Weekly Planner</a>
+                </div>
+                <div class="column is-2">
+                    <h1 class="is-size-5" id="connect">Connect</h1>
+                    <h2>Jess Greene</h2>
+                    <ul id="page-links">
+                        <li>
+                            <a href="#">GitHub</a>
+                        </li>
+                        <li>
+                            <a href="#">LinkedIn</a>
+                        </li>
+                    </ul><br>
+                    <h2>Alexandra Hurst</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Github</a>
+                        </li>
+                        <li>
+                            <a href="#">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row has-text-centered">&copy; 2021 Alexandra Hurst & Jess Greene</div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="./cardio.js"></script>
 </body>
+
 </html>

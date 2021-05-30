@@ -68,7 +68,7 @@ function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
     var shuffledExercises = _.shuffle(collection[c].results);
-    var slicedExercises = shuffledExercises.slice(0, 15);
+    var slicedExercises = shuffledExercises.slice(0, 20);
     console.log(slicedExercises);
     
     for (var i = 0; i < slicedExercises.length; i++) {
@@ -78,7 +78,7 @@ function renderCollection(collection) {
       inputEl.setAttribute("name", "name");
       var labelEl = document.createElement("label");
       labelEl.textContent = slicedExercises[i].name;
-      labelEl.className = "row checkbox-container";
+      labelEl.className = "row checkbox-container has-text-white";
       labelEl.setAttribute("id", "labelId");
       labelEl.setAttribute("value", "slicedExercises[i].name");
       listOfExercisesEl.appendChild(labelEl);
@@ -145,6 +145,7 @@ function renderCollection(collection) {
             // }};
           }
 
+
           function getInnerText(labelName, label){
           let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
           let labels= document.querySelectorAll("label");
@@ -171,6 +172,68 @@ function renderCollection(collection) {
 
 const chosenBtnEl = document.querySelector("#chosen-button");
 chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues)); 
+=======
+
+
+ 
+
+  // $("#merge_button").click(function(event){
+  //   event.preventDefault();
+  //   var searchIDs = [];
+  //   $("#labelId input:checkbox:checked").map(function(){
+  //       searchIDs.push($(this).val());
+  //   });
+  //   console.log(searchIDs);
+  // });
+
+
+  //   chooseDateBtn.addEventListener("click", function(){
+
+  //     // var searchIds = [];
+  //     // var checkedEl= document.querySelector('.exercises').checked;
+  //     var searchIDs = [];
+  //   $(".exercises input:checkbox:checked").map(function(){
+  //     searchIDs.push($(this).val());
+  //   });
+  //   console.log(searchIDs);
+  // });
+
+  //  console.log(searchIds);
+
+  // localStorage.setItem("exercise", JSON.stringify(checkedEl)); 
+  // var checkedValue = null; 
+  // var inputElements = document.querySelector('.exercises');
+  // for(var i=0; inputElements[i]; ++i){
+  //       if(inputElements[i].checked){
+  //            checkedValue = inputElements[i].value;
+  //            break;
+  //       }
+  // console.log("hello");
+  // }
+
+  // var checkedValue = document.querySelector(labelEl.checked).value;
+  // console.log(checkedValue);
+  // document.querySelector(".exercises").onclick = function() {
+  //   var checkboxes = document.getElementsByName('name');
+  //   for (var checkbox of checkboxes)
+  //   {
+  //       if (checkbox.checked) {
+  //           inputEl.append(checkbox.value + ' ');
+  //     }
+  // }
+};}
+}
+
+//   // var exerciseLabel = labelEl.value
+//   chooseDateBtn.addEventListener("click", function(){
+//   localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked)); 
+// });
+
+
+
+const chosenBtnEl = document.querySelector('#chosen-button');
+chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
+
 
 // mobile menu
 

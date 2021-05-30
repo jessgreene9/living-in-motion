@@ -64,3 +64,109 @@ bottom-left {
     top: 0;
     box-shadow: -5px -5px 5px rgb(34, 33, 33);
 }
+
+#overlay-text {
+    border-radius: 10px;
+    height: 60px;
+    background-color: #393c40ff;
+    color: white;
+}
+
+/* #homepage-text {
+    color: orangered;
+
+} */
+
+#selection-title {
+    /* color: orangered; */
+    text-shadow: 5px 5px #333;
+}
+
+input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    /* border: 1px solid #fff; */
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    /* -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+  }
+
+  label::before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    /* border-radius: 50%;
+    border: 1px solid grey; */
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+  }
+  
+  label img {
+      border-radius: 15px;
+      height: 200px;
+      width: 400px;
+    /* height: 100px;
+    width: 100px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%; */
+  }
+  
+  :checked+label {
+    border-color: #ddd;
+  }
+  
+  :checked+label::before {
+    content: "✓";
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    transform: scale(2);
+    border-radius: 5px;
+  }
+  
+  :checked+label img {
+    /* transform: scale(0.9); */
+    box-shadow: 0 0 10px #333;
+    z-index: -1;
+  }
+
+  #chosen-button {
+      border-radius: 5px;
+      background-color: rgb(224, 223, 235);
+  }
+
+#cardio-text {
+    font-size: 20px;
+}
+
+#centered {
+    display: flex;
+    justify-content: center;
+}
+
+#cardio-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(224, 223, 235);
+}
