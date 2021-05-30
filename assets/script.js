@@ -143,7 +143,8 @@ function renderCollection(collection) {
           }
           // function getCheckboxLabel() {
             // }};
-          }
+          };
+
 
 
           function getInnerText(labelName, label){
@@ -170,9 +171,8 @@ function renderCollection(collection) {
 
 
 
-const chosenBtnEl = document.querySelector("#chosen-button");
-chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues)); 
-=======
+
+
 
 
  
@@ -221,18 +221,49 @@ chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues));
   //           inputEl.append(checkbox.value + ' ');
   //     }
   // }
-};}
-}
+
+
 
 //   // var exerciseLabel = labelEl.value
 //   chooseDateBtn.addEventListener("click", function(){
 //   localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked)); 
 // });
 
+function getInnerText(labelName, label){
+let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
+console.log(checkboxes);
+
+var checkboxLabel = input.labels.label.innerText;
+console.log(checkboxLabel);
+
+var checkedArray= [];
 
 
-const chosenBtnEl = document.querySelector('#chosen-button');
-chosenBtnEl.addEventListener('click', (getSelectedCheckboxValues));
+
+if (checkboxes) {};
+
+
+}
+
+
+chooseDateBtn.addEventListener("click", (getInnerText));
+
+// var selectedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
+// var searchIds = selectedCheckboxes.map(function(checkbox) {
+//   return checkbox.label;
+// });
+// console.log(searchIds); 
+            
+// var exerciseLabel = labelEl.value
+
+// localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked));
+// });
+
+// function getCheckboxLabel(){};
+
+const chosenBtnEl = document.querySelector("#chosen-button");
+chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues)); 
+
 
 
 // mobile menu
