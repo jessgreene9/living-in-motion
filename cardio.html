@@ -10,6 +10,9 @@
     <script src="https://kit.fontawesome.com/d83ac923b4.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" />
     <link rel="stylesheet" href="./assets/style.css">
 
 </head>
@@ -19,7 +22,7 @@
         <!-- logo / brand -->
         <div class="navbar-brand" id="home">
             <a href="#" class="navbar-item">
-                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 60px" />
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 70px" />
             </a>
             <a class="navbar-burger" id="burger">
                 <span></span>
@@ -29,9 +32,9 @@
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <a class="navbar-item is-size-5 px-6" href="./homepage.html">Design A Custom Workout</a>
-                <a class="navbar-item is-size-5 px-6" href="./weekly-planner.html">Weekly Planner</a>
-                <a class="navbar-item is-size-5 mx-4" href="#connect">Connect</a>
+                <a class="navbar-item is-size-5 px-4" href="./homepage.html">Design A Workout</a>
+                <a class="navbar-item is-size-5 px-4" href="./weekly-planner.html">Weekly Planner</a>
+                <a class="navbar-item is-size-5 mx-2" href="#connect">Connect</a>
             </div>
         </div>
     </nav>
@@ -47,7 +50,7 @@
                         </span>Living In Motion
                     </a>
                 </li>
-                <li class="is-active"><a href="./cardio.html" aria-current="page"><span class="icon is small">
+                <li class="is-active has-text-weight-bold"><a href="./cardio.html" aria-current="page"><span class="icon is small">
                             <i class="fa fa-running" aria-current="hidden">
                             </i>
                         </span><span>Cardio Training Workouts</span></a></li>
@@ -63,10 +66,13 @@
         </nav>
     </section>
 
-    <section>
-        <img class="hero">/>
-        <a href="#home"><button id="myBtn" class="button">Top</button></a>
-    </section>
+    <header class="hero">
+        <!-- quote displays here-->
+        <div>
+            <h1 id="quoteDisplay"></h1>
+            <a href="#home"><button id="myBtn" class="button">Top</button></a>
+        </div>
+    </header>
 
     <section class="section">
         <div class="container">
@@ -77,27 +83,27 @@
             <form id="cardio-form">
                 <div class="columns">
                     <div class="column">
-                        <div id="cardio-card" class="card">
+                        
                             <input type="radio" id="hiit" name="selection" value="hiit">
-                            <label class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
-                                for="hiit">High
-                                Intensity Interval Training</label>
-                        </div>
+                            <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
+                                for="hiit"><div id="cardio-card" class="card">High
+                                Intensity Interval Training</div></label>
+                        
                     </div>
                     <div class="column">
-                        <div id="cardio-card" class="card">
+                        
                             <input type="radio" id="speed" name="selection" value="speed">
-                            <label class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
-                                for="speed">Speed
-                                Training</label>
-                        </div>
+                            <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
+                                for="speed"><div id="cardio-card" class="card">Speed
+                                Training</div></label>
+                        
                     </div>
                     <div class="column">
-                        <div id="cardio-card" class="card">
+                        
                             <input type="radio" id="distance" name="selection" value="distance">
-                            <label class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
-                                for="distance">Distance Training</label>
-                        </div>
+                            <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
+                                for="distance"><div id="cardio-card" class="card">Distance Training</div></label>
+                        
                     </div>
                 </div>
                 <!-- <div id="centered">
@@ -298,7 +304,7 @@
     <footer class="footer has-background-white">
         <div class="container">
             <div class="columns mb-6">
-                <div class="column is-3 pt-6 mr-6">
+                <div class="column is-2 pt-6 mr-6">
                     <img src="assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 60px" />
                 </div>
                 <div class="column is-5 pt-5">
@@ -308,30 +314,31 @@
                         cumque
                         dolorem laboriosam molestiae? Error?</p>
                 </div>
-                <div class="column is-2">
+                <div class="column is-3">
                     <h1 id="page-links" class="is-size-5">Explore</h1>
-                    <a href="./homepage.html">Home</a><br>
-                    <a href="./homepage.html">Design A Workout</a><br>
-                    <a href="./weekly-planner.html">Weekly Planner</a>
+                    <a  class="has-text-grey" href="#home">Home</a><br>
+                    <a  class="has-text-grey" href="./cardio.html">Cardio Training Workouts</a><br>
+                    <a  class="has-text-grey" href="./strength-training.html">Strength Training Workouts</a><br>
+                    <a  class="has-text-grey" href="./weekly-planner.html">Weekly Planner</a>
                 </div>
                 <div class="column is-2">
                     <h1 class="is-size-5" id="connect">Connect</h1>
                     <h2>Jess Greene</h2>
                     <ul id="page-links">
                         <li>
-                            <a href="#">GitHub</a>
+                            <a  class="has-text-grey" href="https://github.com/jessgreene9">GitHub</a>
                         </li>
                         <li>
-                            <a href="#">LinkedIn</a>
+                            <a  class="has-text-grey" href="http://www.linkedin.com/in/jess-greene-241139211">LinkedIn</a>
                         </li>
                     </ul><br>
                     <h2>Alexandra Hurst</h2>
                     <ul>
                         <li>
-                            <a href="#">Github</a>
+                            <a  class="has-text-grey" href="https://github.com/AlNHurst">Github</a>
                         </li>
                         <li>
-                            <a href="#">LinkedIn</a>
+                            <a  class="has-text-grey" href="www.linkedin.com/in/alexandra-hurst-28b185130">LinkedIn</a>
                         </li>
                     </ul>
                 </div>
@@ -340,7 +347,7 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
