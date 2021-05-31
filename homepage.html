@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Living In Motion</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/d83ac923b4.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -15,8 +18,7 @@
         <!-- logo / brand -->
         <div class="navbar-brand" id="home">
             <a href="#" class="navbar-item">
-                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 100px"
-                    class="py-2 px-2" />
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 60px" />
             </a>
             <a class="navbar-burger" id="burger">
                 <span></span>
@@ -26,12 +28,13 @@
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <a class="navbar-item is-size-4 px-6" href="#design-a-workout">Design Your Workout</a>
-                <a class="navbar-item is-size-4 px-6" href="#weekly-planner">Weekly Planner</a>
-                <a class="navbar-item is-size-4 px-4 mx-4" href="#connect">Connect</a>
+                <a class="navbar-item is-size-5 px-6" href="#design-a-workout">Design A Custom Workout</a>
+                <a class="navbar-item is-size-5 px-6" href="./weekly-planner.html">Weekly Planner</a>
+                <a class="navbar-item is-size-5 mx-4" href="#connect">Connect</a>
             </div>
         </div>
     </nav>
+
 
    
         <header class="hero">
@@ -43,11 +46,45 @@
     
     <a href="#home"><button id="sticky" class="button is-left mr-4 is-pulled-right">Return to Top</button></a>
 
+    <section class="section pt-2 pb-0 has-background-white">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul class="container">
+                <li class="is-active">
+                    <a href="./homepage.html" aria-current="page">
+                        <span class="icon is small">
+                            <i class="fa fa-home" aria-current="hidden">
+                            </i>
+                        </span>Living In Motion
+                    </a>
+                </li>
+                <li><a href="./cardio.html" class="has-text-grey"><span class="icon is small">
+                            <i class="fa fa-running" aria-current="hidden">
+                            </i>
+                        </span><span>Cardio Training Workouts</span></a></li>
+                <li><a href="./strength-training.html" class="has-text-grey"><span class="icon is small">
+                            <i class="fa fa-dumbbell" aria-current="hidden"></i>
+                        </span>
+                        <span>Strength Training Workouts</span></a></li>
+                <li><a href="./weekly-planner.html" class="has-text-grey"><span class="icon is small">
+                    <i class="fa fa-calendar" aria-current="hidden"></i>
+                </span>
+                <span>Weekly Planner</span></a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <img class="hero">/>
+        <a href="#home"><button id="myBtn" class="button">Top</button></a>
+    </section>
+
+
+
     <section class="section">
         <div class="container">
             <div id="design-a-workout" class="row has-text-centered">
-                <h1 class="has-text-white is-size-2 mb-4 py-4">Design A Custom Workout</h1>
-                <p class="has-text-white is-size-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1 class="has-text-white is-size-2 mb-4">Design A Custom Workout</h1>
+                <p class="has-text-white is-size-5 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Repellendus quibusdam consequatur at alias labore ipsa nisi itaque delectus iste, ex laborum vel
                     molestiae laudantium? Reprehenderit asperiores modi distinctio. Labore, in?</p>
             </div>
@@ -55,7 +92,8 @@
                 <div class="column">
                     <a class="card" href="./strength-training.html">
                         <figure class="card-image">
-                            <img src="assets/images/kettleball.png" alt="a man working out next to a kettleball" />
+                            <img id="workout-category-image" src="assets/images/kettleball.png"
+                                alt="a man working out next to a kettleball" />
                         </figure>
                         <div class="card-content is-overlay">
                             <span id="overlay-text" class="tag is-large has-text-weight-bold">Strength Training</span>
@@ -65,7 +103,8 @@
                 <div class="column">
                     <a class="card" href="./cardio.html">
                         <figure class="card-image">
-                            <img src="assets/images/running-mountain.png" alt="a woman running up the mountain" />
+                            <img id="workout-category-image" src="assets/images/running-mountain.png"
+                                alt="a woman running up the mountain" />
                         </figure>
                         <div class="card-content is-overlay">
                             <span id="overlay-text" class="tag is-large has-text-weight-bold">Cardio Training</span>
@@ -75,122 +114,18 @@
             </div>
         </div>
     </section>
-    <section class="section" id="weekly-planner">
-        <div class="container">
-            <h1 class="title has-text-centered has-text-white is-size-1 my-4 py-4">Weekly Planner</h1>
-            <div class="columns">
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Sunday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Monday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Tuesday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Wednesday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Thursday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Friday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Saturday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <div id="weather">
 
     </div>
 
 
-    <footer class="footer">
+    <footer class="footer has-background-white">
         <div class="container">
             <div class="columns mb-6">
                 <div class="column is-3 pt-6 mr-6">
-                    <img src="assets/images/living-in-motion-logo.JPG" />
+                    <img src="assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 60px" />
                 </div>
                 <div class="column is-5 pt-5">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dignissimos dolores tempore beatae
@@ -201,7 +136,7 @@
                     <h1 id="page-links" class="is-size-5">Explore</h1>
                     <a href="#home">Home</a><br>
                     <a href="#design-a-workout">Design A Workout</a><br>
-                    <a href="#weekly-planner">Weekly Planner</a>
+                    <a href="./weekly-planner.html">Weekly Planner</a>
                 </div>
                 <div class="column is-2">
                     <h1 class="is-size-5" id="connect">Connect</h1>

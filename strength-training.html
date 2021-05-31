@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Living In Motion</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/d83ac923b4.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -15,7 +18,7 @@
         <!-- logo / brand -->
         <div class="navbar-brand" id="home">
             <a href="#" class="navbar-item">
-                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 100px" class="py-2 px-2">
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 60px" />
             </a>
             <a class="navbar-burger" id="burger">
                 <span></span>
@@ -25,72 +28,126 @@
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <!-- <a class="navbar-item is-size-4 pr-6" href="./homepage.html">Home</a> -->
-                <a class="navbar-item is-size-4 pr-6" href="#weekly-planner">Weekly Planner</a>
-                <a class="navbar-item is-size-4 pr-4 mr-4" href="#connect">Connect</a>
+                <a class="navbar-item is-size-5 px-6" href="./homepage.html">Design A Custom Workout</a>
+                <a class="navbar-item is-size-5 px-6" href="./weekly-planner.html">Weekly Planner</a>
+                <a class="navbar-item is-size-5 mx-4" href="#connect">Connect</a>
             </div>
         </div>
     </nav>
 
+    <section class="section pt-2 pb-0 has-background-white">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul class="container">
+                <li>
+                    <a href="./homepage.html" class="has-text-grey">
+                        <span class="icon is small">
+                            <i class="fa fa-home" aria-current="hidden">
+                            </i>
+                        </span>Living In Motion
+                    </a>
+                </li>
+                <li><a href="./cardio.html" class="has-text-grey"><span class="icon is small">
+                            <i class="fa fa-running" aria-current="hidden">
+                            </i>
+                        </span><span>Cardio Training Workouts</span></a></li>
+                <li class="is-active"><a href="./strength-training.html" aria-current="page"><span class="icon is small">
+                            <i class="fa fa-dumbbell" aria-current="hidden"></i>
+                        </span>
+                        <span>Strength Training Workouts</span></a></li>
+                <li><a href="./weekly-planner.html" class="has-text-grey"><span class="icon is small">
+                            <i class="fa fa-calendar" aria-current="hidden"></i>
+                        </span>
+                        <span>Weekly Planner</span></a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <section>
+        <img class="hero">/>
+        <a href="#home"><button id="myBtn" class="button">Top</button></a>
+    </section>
+
+
     <section class="section">
         <div class="container">
-            <h1 id="selection-title" class="title has-text-centered has-text-white is-size-1">Select Your Muscle Groups
+            <h1 id="selection-title" class="title has-text-centered has-text-white is-size-3">Select Your Muscle Groups
             </h1>
             <div id="formName">
                 <div class="columns is-multiline">
                     <div class="column is-one-third">
                         <input type="checkbox" id="8" name="chosen" value="Arms">
-                        <label for="8"><img src="./assets/images/arms-exercise2.jpg"
-                                alt="Man performing a bicep curl. Photo by Daniel Apodaca on Unsplash" /></label>
+                        <label for="8">
+                            <div id="figure" class="figure"><img src="./assets/images/arms-exercise2.jpg"
+                                    alt="Man performing a bicep curl. Photo by Daniel Apodaca on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="12" name="chosen" value="Back">
-                        <label for="12"><img src="./assets/images/back-exercise.jpg"
-                                alt="Photo of woman's back. Photo by Scott Webb on Unsplash" /></label>
+                        <label for="12">
+                            <div id="figure" class="figure"><img src="./assets/images/back-exercise.jpg"
+                                    alt="Photo of woman's back. Photo by Scott Webb on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
-                        <input type="checkbox" id="10" name="chosen" value="Core">
-                        <label for="10"><img src="./assets/images/abs-exercise.jpg"
-                                alt="Woman performing ab rolls. Photo by Jonathan Borba on Unsplash" /></label>
+                        <input type="checkbox" id="10" name="chosen" value="Abs">
+                        <label for="10">
+                            <div id="figure" class="figure"><img src="./assets/images/abs-exercise.jpg"
+                                    alt="Woman performing ab rolls. Photo by Jonathan Borba on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="11" name="chosen" value="Chest">
-                        <label for="11"><img src="./assets/images/chest-exercise.jpg"
-                                alt="Woman performing barbell bench press. Photo by Alora Griffiths on Unsplash" /></label>
+                        <label for="11">
+                            <div id="figure" class="figure"><img src="./assets/images/chest-exercise.jpg"
+                                    alt="Woman performing barbell bench press. Photo by Alora Griffiths on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="9" name="chosen" value="Legs">
-                        <label for="9"><img src="./assets/images/legs-exercise.jpg"
-                                alt="Photo of woman's back. Photo by Scott Webb on Unsplash" /></label>
+                        <label for="9">
+                            <div id="figure" class="figure"><img src="./assets/images/legs-exercise.jpg"
+                                    alt="Photo of woman's back. Photo by Scott Webb on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="13" name="chosen" value="Shoulders">
-                        <label for="13"><img src="./assets/images/shoulders-exercise.jpg"
-                                alt="Profile photo of woman. Photo by Scott Webb on Unsplash" /></label>
+                        <label for="13">
+                            <div id="figure" class="figure"><img src="./assets/images/shoulders-exercise.jpg"
+                                    alt="Profile photo of woman. Photo by Scott Webb on Unsplash" />
+                            </div>
+                        </label>
                     </div>
-                    <div class="column is-centered">
-                        <input class="button is-large has-text-darkgrey has-text-weight-bold" id="chosen-button"
+                    <div id="centered" class="column is-centered">
+                        <input class="button is-medium has-text-darkgrey has-text-weight-bold" id="chosen-button"
                             type="submit" name="submit" value="Proceed to Exercises" />
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="exercise-container">
-            <form id="list-of-exercises">
+    </section>
+    <section class="section">
+        <div class="container" id="exercise-container">
+            <form>
+                <div id="list-of-exercises">
+                </div>
+                <div id="centered">
+                    <input class="hide button is-medium has-background-dark has-text-white has-text-weight-bold"
+                        id="choose-date" type="submit" name="submit" value="Choose Date" />
+                </div>
             </form>
-            <input class="hide" type="Submit" id="choose-date" value="Choose Date" />
-
         </div>
     </section>
 
-    <div id="test"></div>
-
-    <footer class="footer">
+    <footer class="footer has-background-white">
         <div class="container">
             <div class="columns mb-6">
                 <div class="column is-3 pt-6 mr-6">
-                    <img src="assets/images/living-in-motion-logo.JPG">
+                    <img src="assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 60px"/>
                 </div>
                 <div class="column is-5 pt-5">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dignissimos dolores tempore
@@ -101,9 +158,9 @@
                 </div>
                 <div class="column is-2">
                     <h1 id="page-links" class="is-size-5">Explore</h1>
-                    <a href="#home">Home</a><br>
-                    <a href="#design-a-workout">Design A Workout</a><br>
-                    <a href="#weekly-planner">Weekly Planner</a>
+                    <a href="./homepage.html">Home</a><br>
+                    <a href="./homepage.html">Design A Workout</a><br>
+                    <a href="./weekly-planner.html">Weekly Planner</a>
                 </div>
                 <div class="column is-2">
                     <h1 class="is-size-5" id="connect">Connect</h1>

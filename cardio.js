@@ -2,6 +2,13 @@ var speedShowEl = document.querySelector("#speed-show");
 var hiitShowEl = document.querySelector("#hiit-show");
 var distanceShowEl = document.querySelector("#distance-show");
 
+var burpeeHiitEl = document.querySelector("#burpee-hiit");
+var fullBodyHiitEl = document.querySelector("#full-body-hiit");
+var easyRunEl = document.querySelector("#easy-run");
+var tempoRunEl = document.querySelector("#tempo-run");
+var ladderSpeedEl = document.querySelector("#ladder-speed");
+var hillSpeedEl = document.querySelector
+
 // function getSelectedCardioWorkout(event) {
 //     event.preventDefault();
 //     // used the queryselectorAll() method to select the radio button group with the name selection. The radio buttons all have the same name.

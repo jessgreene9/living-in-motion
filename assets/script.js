@@ -2,6 +2,16 @@ var apiKey = "867ee0b8397845db43d24c7003e387b5742e2bdc";
 var startBtnEl = document.querySelector("#start");
 var workoutContainerEl = document.querySelector("#workout-container");
 var chooseDateBtn = document.querySelector("#choose-date");
+var speedShowEl = document.querySelector("#speed-show");
+var hiitShowEl = document.querySelector("#hiit-show");
+var distanceShowEl = document.querySelector("#distance-show");
+
+var burpeeHiitEl = document.querySelector("#burpee-hiit");
+var fullBodyHiitEl = document.querySelector("#full-body-hiit");
+var easyRunEl = document.querySelector("#easy-run");
+var tempoRunEl = document.querySelector("#tempo-run");
+var ladderSpeedEl = document.querySelector("#ladder-speed");
+var hillSpeedEl = document.querySelector
 
 var categories = ["Cardio", "Core", "Upper Body", "Lower Body"];
 
@@ -68,206 +78,47 @@ function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
     var shuffledExercises = _.shuffle(collection[c].results);
-    var slicedExercises = shuffledExercises.slice(0, 20);
+    var slicedExercises = shuffledExercises.slice(0, 10);
     console.log(slicedExercises);
-    
+
     for (var i = 0; i < slicedExercises.length; i++) {
       var inputEl = document.createElement("input");
       inputEl.setAttribute("type", "checkbox");
       inputEl.className = "exercises";
       inputEl.setAttribute("name", "name");
+      inputEl.setAttribute("data-name", slicedExercises[i].name);
+      // console.log(inputEl);
       var labelEl = document.createElement("label");
       labelEl.textContent = slicedExercises[i].name;
-      labelEl.className = "row checkbox-container has-text-white";
+      labelEl.className = "row checkbox-container has-text-black";
       labelEl.setAttribute("id", "labelId");
       labelEl.setAttribute("value", "slicedExercises[i].name");
       listOfExercisesEl.appendChild(labelEl);
       labelEl.prepend(inputEl);
-      
-      chooseDateBtn.classList.remove("hide");
-      
-      //   function getCheckboxLabel(checkbox) {
-        //     if (checkbox.parentNode.tagName === 'LABEL') {
-          //         return checkbox.parentNode
-          //     }
-          //     if (checkbox.id) {
-            //         return document.querySelector('label[for="' + checkbox.id + '"]')
-            //     }
-            
-            // }
-            
-            // $("#merge_button").click(function(event){
-              //   event.preventDefault();
-              //   var searchIDs = [];
-              //   $("#labelId input:checkbox:checked").map(function(){
-                //       searchIDs.push($(this).val());
-          //   });
-          //   console.log(searchIDs);
-          // });
-          
-          //   chooseDateBtn.addEventListener("click", function(){
-            
-            //     // var searchIds = [];
-            //     // var checkedEl= document.querySelector('.exercises').checked;
-            //     var searchIDs = [];
-            //   $(".exercises input:checkbox:checked").map(function(){
-              //     searchIDs.push($(this).val());
-              //   });
-              //   console.log(searchIDs);
-              // });
-              
-              //  console.log(searchIds);
-              
-              // localStorage.setItem("exercise", JSON.stringify(checkedEl));
-              // var checkedValue = null;
-              // var inputElements = document.querySelector('.exercises');
-              // for(var i=0; inputElements[i]; ++i){
-                //       if(inputElements[i].checked){
-                  //            checkedValue = inputElements[i].value;
-                  //            break;
-        //       }
-        // console.log("hello");
-        // }
-        
-        // var checkedValue = document.querySelector(labelEl.checked).value;
-        // console.log(checkedValue);
-        // document.querySelector(".exercises").onclick = function() {
-          //   var checkboxes = document.getElementsByName('name');
-          //   for (var checkbox of checkboxes)
-          //   {
-            //       if (checkbox.checked) {
-              //           inputEl.append(checkbox.value + ' ');
-              //     }
-              // }
-            }
-          }
-          // function getCheckboxLabel() {
-            // }};
-          };
+      console.log(labelEl.textContent);
 
+    }
+  }
 
+  var chooseDateBtn = document.querySelector("#choose-date");
+  chooseDateBtn.classList.remove("hide");
+  chooseDateBtn.setAttribute("id", "merge_button");
 
-          function getInnerText(labelName, label){
-          let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
-          let labels= document.querySelectorAll("label");
-          console.log(labels);
-          console.log(checkboxes);
-          var labelText = label.label.innerText;
-          console.log(labelText);  
-          if (checkboxes) {}};
-          // var selectedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
-          // var searchIds = selectedCheckboxes.map(function(checkbox) {
-            //   return checkbox.label;
-            // });
-            // console.log(searchIds); 
-            
-            // var exerciseLabel = labelEl.value
-          
-          // localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked));
-          // });
-          
-          chooseDateBtn.addEventListener("click", (getInnerText));
-          // function getCheckboxLabel(){};
-
-
-
-
-
-
-
- 
-
-  // $("#merge_button").click(function(event){
-  //   event.preventDefault();
-  //   var searchIDs = [];
-  //   $("#labelId input:checkbox:checked").map(function(){
-  //       searchIDs.push($(this).val());
-  //   });
-  //   console.log(searchIDs);
-  // });
-
-
-  //   chooseDateBtn.addEventListener("click", function(){
-
-  //     // var searchIds = [];
-  //     // var checkedEl= document.querySelector('.exercises').checked;
-  //     var searchIDs = [];
-  //   $(".exercises input:checkbox:checked").map(function(){
-  //     searchIDs.push($(this).val());
-  //   });
-  //   console.log(searchIDs);
-  // });
-
-  //  console.log(searchIds);
-
-  // localStorage.setItem("exercise", JSON.stringify(checkedEl)); 
-  // var checkedValue = null; 
-  // var inputElements = document.querySelector('.exercises');
-  // for(var i=0; inputElements[i]; ++i){
-  //       if(inputElements[i].checked){
-  //            checkedValue = inputElements[i].value;
-  //            break;
-  //       }
-  // console.log("hello");
-  // }
-
-  // var checkedValue = document.querySelector(labelEl.checked).value;
-  // console.log(checkedValue);
-  // document.querySelector(".exercises").onclick = function() {
-  //   var checkboxes = document.getElementsByName('name');
-  //   for (var checkbox of checkboxes)
-  //   {
-  //       if (checkbox.checked) {
-  //           inputEl.append(checkbox.value + ' ');
-  //     }
-  // }
-
-
-
-//   // var exerciseLabel = labelEl.value
-//   chooseDateBtn.addEventListener("click", function(){
-//   localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked)); 
-// });
-
-function getInnerText(labelName, label){
-let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
-console.log(checkboxes);
-
-var checkboxLabel = input.labels.label.innerText;
-console.log(checkboxLabel);
-
-var checkedArray= [];
-
-
-
-if (checkboxes) {};
-
-
+  chooseDateBtn.addEventListener("click", function (event) { 
+    event.preventDefault();
+    var element = event.target;
+    if (element.matches('#merge_button')) {
+      var selectedCheckboxes = Array.from(document.querySelectorAll('#labelId input[type=checkbox]:checked'));
+      console.log(selectedCheckboxes);
+      var searchNames = selectedCheckboxes.map(function (checkbox) {
+        return checkbox.dataset.name;
+      });
+      console.log(searchNames);
+    }
+  });
 }
 
-
-chooseDateBtn.addEventListener("click", (getInnerText));
-
-// var selectedCheckboxes = document.querySelectorAll("input[type=checkbox]:checked");
-// var searchIds = selectedCheckboxes.map(function(checkbox) {
-//   return checkbox.label;
-// });
-// console.log(searchIds); 
-            
-// var exerciseLabel = labelEl.value
-
-// localStorage.setItem(exerciseLabel, JSON.stringify(inputEl.checked));
-// });
-
-// function getCheckboxLabel(){};
-
-const chosenBtnEl = document.querySelector("#chosen-button");
-chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues)); 
-
-
-
 // mobile menu
-
 // var burgerIconEl = document.querySelector("#burger");
 // var navbarMenuEl = document.querySelector("#nav-links");
 
@@ -276,3 +127,56 @@ chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues));
 // });
 
 // startBtnEl.addEventListener('click', )
+
+
+// Select cardio workout category and display workout divs
+var cardioSelections = document.querySelectorAll('input[name="selection"]');
+var selectedValue;
+
+for (var i = 0; i < cardioSelections.length; i++) {
+  cardioSelections[i].onclick = function () {
+    for (var cardioSelection of cardioSelections) {
+      if (cardioSelection.checked) {
+        selectedValue = cardioSelection.value;
+      }
+      if (selectedValue === "speed") {
+        speedShowEl.setAttribute("style", "display: show");
+        hiitShowEl.setAttribute("style", "display: none");
+        distanceShowEl.setAttribute("style", "display: none");
+      }
+      if (selectedValue === "distance") {
+        speedShowEl.setAttribute("style", "display: none");
+        hiitShowEl.setAttribute("style", "display: none");
+        distanceShowEl.setAttribute("style", "display: show");
+      }
+      if (selectedValue === "hiit") {
+        speedShowEl.setAttribute("style", "display: none");
+        hiitShowEl.setAttribute("style", "display: show");
+        distanceShowEl.setAttribute("style", "display: none");
+      }
+    }
+  }
+}
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+const chosenBtnEl = document.querySelector("#chosen-button");
+chosenBtnEl.addEventListener("click", (getSelectedCheckboxValues));
