@@ -15,8 +15,7 @@
         <!-- logo / brand -->
         <div class="navbar-brand" id="home">
             <a href="#" class="navbar-item">
-                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 100px"
-                    class="py-2 px-2" />
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="" style="max-height: 80px" />
             </a>
             <a class="navbar-burger" id="burger">
                 <span></span>
@@ -26,9 +25,9 @@
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <a class="navbar-item is-size-4 px-6" href="#design-a-workout">Design Your Workout</a>
-                <a class="navbar-item is-size-4 px-6" href="#weekly-planner">Weekly Planner</a>
-                <a class="navbar-item is-size-4 px-4 mx-4" href="#connect">Connect</a>
+                <a class="navbar-item is-size-5 px-6" href="#design-a-workout">Design Your Workout</a>
+                <a class="navbar-item is-size-5 px-6" href="#weekly-planner">Weekly Planner</a>
+                <a class="navbar-item is-size-5 mx-4" href="#connect">Connect</a>
             </div>
         </div>
     </nav>
@@ -36,13 +35,13 @@
 
     <img class="hero"></img>
 
-    <a href="#home"><button id="sticky" class="button is-left mr-4 is-pulled-right">Return to Top</button></a>
+    <a href="#home"><button id="myBtn" class="button">Top</button></a>
 
     <section class="section">
         <div class="container">
             <div id="design-a-workout" class="row has-text-centered">
-                <h1 class="has-text-white is-size-2 mb-4 py-4">Design A Custom Workout</h1>
-                <p class="has-text-white is-size-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h1 class="has-text-white is-size-2 mb-4 ">Design A Custom Workout</h1>
+                <p class="has-text-white is-size-5 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Repellendus quibusdam consequatur at alias labore ipsa nisi itaque delectus iste, ex laborum vel
                     molestiae laudantium? Reprehenderit asperiores modi distinctio. Labore, in?</p>
             </div>
@@ -50,7 +49,7 @@
                 <div class="column">
                     <a class="card" href="./strength-training.html">
                         <figure class="card-image">
-                            <img src="assets/images/kettleball.png" alt="a man working out next to a kettleball" />
+                            <img id="workout-category-image" src="assets/images/kettleball.png" alt="a man working out next to a kettleball" />
                         </figure>
                         <div class="card-content is-overlay">
                             <span id="overlay-text" class="tag is-large has-text-weight-bold">Strength Training</span>
@@ -60,7 +59,7 @@
                 <div class="column">
                     <a class="card" href="./cardio.html">
                         <figure class="card-image">
-                            <img src="assets/images/running-mountain.png" alt="a woman running up the mountain" />
+                            <img id="workout-category-image" src="assets/images/running-mountain.png" alt="a woman running up the mountain" />
                         </figure>
                         <div class="card-content is-overlay">
                             <span id="overlay-text" class="tag is-large has-text-weight-bold">Cardio Training</span>
@@ -72,7 +71,7 @@
     </section>
     <section class="section" id="weekly-planner">
         <div class="container">
-            <h1 class="title has-text-centered has-text-white is-size-1 my-4 py-4">Weekly Planner</h1>
+            <h1 id="planner-text" class="title has-text-centered has-text-white is-size-2 pb-2">Weekly Planner</h1>
             <div class="columns">
                 <div class="column">
                     <div id="day-card" class="card">

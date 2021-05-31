@@ -13,51 +13,52 @@
     display: none;
 }
 
-table, th, td {
-    border: 1px solid black;
-  }
-
-  th, td {
-    padding: 15px;
-  }
-
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-
-  td {
-      height:50px;
-      width: 50px;
-  }
-
-
 body {
     background-color: #393c40ff;
 }
 
 .hero {
-    height: 600px;
+    height: 300px;
     width: 100%;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     background-image: url("./images/dumbbells.png");
     background-size: cover;
     background-position: center;
 }
 
-design-images {
+/* design-images {
     width: 100%;
-}
+} */
 
-bottom-left {
+/* bottom-left {
     position: absolute;
     bottom: 8px;
     left: 16px;
-}
+} */
 
 #day-card {
     box-shadow: -12px -12px 5px rgb(34, 33, 33);
 }
+
+#myBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background-color: rgb(28, 128, 158);
+    color: white;     
+    cursor: pointer;
+    padding: 5px; 
+    border-radius: 10px; 
+    font-size: 18px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
 
 #sticky {
     position: sticky;
@@ -83,6 +84,10 @@ bottom-left {
 }
 
 input[type="radio"] {
+    display: none;
+  }
+
+  input[name="chosen"] {
     display: none;
   }
 
@@ -119,7 +124,7 @@ input[type="radio"] {
     transform: scale(0);
   }
   
-  label img {
+  #figure img {
       border-radius: 15px;
       height: 200px;
       width: 400px;
@@ -169,4 +174,8 @@ input[type="radio"] {
     align-items: center;
     height: 100px;
     background-color: rgb(224, 223, 235);
+}
+
+#list-of-exercises {
+    color:rgb(34, 33, 33)
 }
