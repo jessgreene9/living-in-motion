@@ -40,51 +40,72 @@
                 <div class="columns is-multiline">
                     <div class="column is-one-third">
                         <input type="checkbox" id="8" name="chosen" value="Arms">
-                        <label for="8"><img src="./assets/images/arms-exercise2.jpg"
-                                alt="Man performing a bicep curl. Photo by Daniel Apodaca on Unsplash" /></label>
+                        <label for="8">
+                            <div id="figure" class="figure"><img src="./assets/images/arms-exercise2.jpg"
+                                    alt="Man performing a bicep curl. Photo by Daniel Apodaca on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="12" name="chosen" value="Back">
-                        <label for="12"><img src="./assets/images/back-exercise.jpg"
-                                alt="Photo of woman's back. Photo by Scott Webb on Unsplash" /></label>
+                        <label for="12">
+                            <div id="figure" class="figure"><img src="./assets/images/back-exercise.jpg"
+                                    alt="Photo of woman's back. Photo by Scott Webb on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="10" name="chosen" value="Core">
-                        <label for="10"><img src="./assets/images/abs-exercise.jpg"
-                                alt="Woman performing ab rolls. Photo by Jonathan Borba on Unsplash" /></label>
+                        <label for="10">
+                            <div id="figure" class="figure"><img src="./assets/images/abs-exercise.jpg"
+                                    alt="Woman performing ab rolls. Photo by Jonathan Borba on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="11" name="chosen" value="Chest">
-                        <label for="11"><img src="./assets/images/chest-exercise.jpg"
-                                alt="Woman performing barbell bench press. Photo by Alora Griffiths on Unsplash" /></label>
+                        <label for="11">
+                            <div id="figure" class="figure"><img src="./assets/images/chest-exercise.jpg"
+                                    alt="Woman performing barbell bench press. Photo by Alora Griffiths on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="9" name="chosen" value="Legs">
-                        <label for="9"><img src="./assets/images/legs-exercise.jpg"
-                                alt="Photo of woman's back. Photo by Scott Webb on Unsplash" /></label>
+                        <label for="9">
+                            <div id="figure" class="figure"><img src="./assets/images/legs-exercise.jpg"
+                                    alt="Photo of woman's back. Photo by Scott Webb on Unsplash" />
+                            </div>
+                        </label>
                     </div>
                     <div class="column is-one-third">
                         <input type="checkbox" id="13" name="chosen" value="Shoulders">
-                        <label for="13"><img src="./assets/images/shoulders-exercise.jpg"
-                                alt="Profile photo of woman. Photo by Scott Webb on Unsplash" /></label>
+                        <label for="13">
+                            <div id="figure" class="figure"><img src="./assets/images/shoulders-exercise.jpg"
+                                    alt="Profile photo of woman. Photo by Scott Webb on Unsplash" />
+                            </div>
+                        </label>
                     </div>
-                    <div class="column is-centered">
+                    <div id="centered" class="column is-centered">
                         <input class="button is-large has-text-darkgrey has-text-weight-bold" id="chosen-button"
                             type="submit" name="submit" value="Proceed to Exercises" />
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="exercise-container">
-            <form id="list-of-exercises">
+    </section>
+    <section class="section has-background-white">
+        <div class="container" id="exercise-container">
+            <form>
+                <div id="list-of-exercises">
+                </div>
+                <div id="centered">
+                    <input class="hide button is-medium has-background-dark has-text-white has-text-weight-bold"
+                        id="choose-date" type="submit" name="submit" value="Choose Date" />
+                </div>
             </form>
-            <input class="hide" type="Submit" id="choose-date" value="Choose Date" />
-
         </div>
     </section>
-
-    <div id="test"></div>
 
     <footer class="footer">
         <div class="container">
