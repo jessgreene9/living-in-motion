@@ -212,3 +212,37 @@ input[type="radio"] {
 #list-of-exercises {
     color:rgb(34, 33, 33)
 }
+
+.boxes {
+  background-color: lightblue;
+  width: 200px;
+  height: 350px;
+  display: inline-block;
+  margin: 30px 10px;
+  color: #393c40ff;
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+#weather-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+#weather-container label {
+  font-size:24px;
+  color: lightblue;
+  font-weight:bold;
+  
+}
+
+#searchBtn, #input-city {
+  font-size:20px;
+
+}
+#weather-container h3 {
+  font-weight:bold;
+  color: #393c40ff
+}

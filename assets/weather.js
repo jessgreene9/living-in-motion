@@ -42,14 +42,14 @@ function getWeather(cityName) {
             var sevenTempEl = document.createElement("p");
             var sevenHumidityEl = document.createElement("p");
             var sevenWindEl = document.createElement("p");
-            var yourDate = new Date(day.dt * 1000);
+            // var yourDate = new Date(day.dt * 1000);
             console.log(precipitationEl);
             
-            sevenDayDateEl.textContent = yourDate;
+            sevenDayDateEl.textContent = moment.unix(day.dt).format("MMM D, YYYY")
             sevenDescription.src =
             "https://openweathermap.org/img/wn/" + day.weather[0].icon + "@2x.png";
             precipitationEl.textContent = "Precipitation: " + day.pop *100 + "%";
-            sevenTempEl.textContent = "Temp: " + day.temp.day + "°";
+            sevenTempEl.textContent = "Temp: " + day.temp.day + "° F";
             sevenHumidityEl.textContent = "Humidity: " + day.humidity + "%";
             sevenWindEl.textContent = "Wind: " + day.wind_speed + " mph";
             
