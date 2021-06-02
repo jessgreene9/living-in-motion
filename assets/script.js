@@ -2,43 +2,63 @@ var apiKey = "867ee0b8397845db43d24c7003e387b5742e2bdc";
 var startBtnEl = document.querySelector("#start");
 var workoutContainerEl = document.querySelector("#workout-container");
 var chooseDateBtn = document.querySelector("#choose-date");
-var speedShowEl = document.querySelector("#speed-show");
-var hiitShowEl = document.querySelector("#hiit-show");
-var distanceShowEl = document.querySelector("#distance-show");
-var exerciseHeadingEl = document.querySelector("#exercise-heading");
 var chooseDateBtn = document.querySelector("#choose-date");
 var dayButtonsEl = document.querySelector("#day-buttons");
+var cardioSaveButtonEl = document.querySelector(".cardio-save-button");
+var dayContainerEl = document.querySelectorAll("#day-container .column");
+var workoutWrapperEl = document.querySelector(".workout-wrapper");
+var modalEl = document.querySelector("#page-modal");
+var closeEl = document.querySelector(".modal-close");
+var deleteEl = document.querySelector(".delete");
+var cardioDayButtonsEl = document.querySelector("#cardio-day-buttons");
+var secondModalEl = document.querySelector("#second-modal");
+var strengthModalEl = document.querySelector('#strength-modal');
 
-var burpeeHiitEl = document.querySelector("#burpee-hiit");
-var fullBodyHiitEl = document.querySelector("#full-body-hiit");
-var easyRunEl = document.querySelector("#easy-run");
-var tempoRunEl = document.querySelector("#tempo-run");
-var ladderSpeedEl = document.querySelector("#ladder-speed");
-var hillSpeedEl = document.querySelector
+var mybuttonEl = document.getElementById("myBtn");
+
+var quoteBank = [
+  "'The pain you feel today, will be the strength you feel tomorrow.'",
+  "'Do something today that your future self will thank you for.'",
+  "'When you feel like quitting, think of why you started.'",
+  "'You are worth it. Keep going.'",
+  "'All progress takes place outside the comfort zone.'",
+  "'Stay patient and trust your journey.'",
+  "'The key to success is to focus on goals, not obstacles.'",
+  "'Don't limit your challenges. Challenge your limits.'",
+  "'The distance between your dreams and reality is called action.'",
+  "'One day or day one. You decide.'",
+  "'Difficult roads often lead to beautiful destinations.'",
+  "'Be yourself. Everyone else is already taken.'",
+  "'Strive for progress, not perfection.'",
+  "'Believe you can, and you're halfway there.'",
+  "'Each morning we are born again. What we do today matters most.'",
+  "'Take a deep breath and remember that where you are now isn't where you are going to end up.'",
+  "'Let us make our future now, and let us make our dreams tomorrow's reality.'",
+];
 
 var categories = ["Cardio", "Core", "Upper Body", "Lower Body"];
 
-var days = [
+var cardioWorkout = JSON.parse(localStorage.getItem("cardioWorkout")) || [
   [], // Sunday Funday
   [], // Monday
-  [], 
+  [],
   [],
   [],
   [],
   [], // Saturday
 ];
-
 var strengthWorkout = JSON.parse(localStorage.getItem("strengthWorkout")) || [
   [], // Sunday Funday
   [], // Monday
-  [], 
+  [],
   [],
   [],
   [],
   [], // Saturday
 ];
 
-// strengthWorkout[0] = ["Chin Ups", "Sit Ups"]; 
+newQuote();
+renderSavedWorkouts();
 
 function getSelectedCheckboxValues(event) {
   event.preventDefault();
@@ -112,7 +132,6 @@ function renderCollection(collection) {
       inputEl.className = "exercises";
       inputEl.setAttribute("name", "name");
       inputEl.setAttribute("data-name", slicedExercises[i].name);
-      // console.log(inputEl);
       var labelEl = document.createElement("label");
       labelEl.textContent = slicedExercises[i].name;
       labelEl.className = "row checkbox-container has-text-black";
@@ -120,149 +139,190 @@ function renderCollection(collection) {
       labelEl.setAttribute("value", "slicedExercises[i].name");
       listOfExercisesEl.appendChild(labelEl);
       labelEl.prepend(inputEl);
-      // console.log(labelEl.textContent);
     }
   }
-
+  var exerciseHeadingEl = document.querySelector("#exercise-heading");
 
   dayButtonsEl.classList.remove("hide");
   exerciseHeadingEl.classList.remove("hide");
-  // dayButtonsEl.setAttribute("id", "merge_button");
-
-  // 
-
-  dayButtonsEl.addEventListener("click", function (event) {
-    event.preventDefault();
-    var element = event.target;
-    
-    if (element.matches('button')) {
-      var index = element.dataset.index;
-      var checkedBoxes = document.querySelectorAll('#labelId input[type=checkbox]:checked');
-      var selectedCheckboxes = Array.from(checkedBoxes);
-      // console.log(selectedCheckboxes);
-      var selectionNames = selectedCheckboxes.map(function (checkbox) {
-        return checkbox.dataset.name;
-      });
-      // saves the new array, selectedNames, to the local storage
-      strengthWorkout[index] = selectionNames;
-      localStorage.setItem("strengthWorkout", JSON.stringify(strengthWorkout));
-      for (var checkedBox of checkedBoxes) {
-        checkedBox.checked = false;
-      }
-      location.replace("./weekly-planner.html");
-    } 
-  });
 }
 
-// dayButtonsEl.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   var element = event.target;
-//   if (element.matches('#merge_button')) {
-//     var selectedCheckboxes = Array.from(document.querySelectorAll('#labelId input[type=checkbox]:checked'));
-//     // console.log(selectedCheckboxes);
-//     var selectionNames = selectedCheckboxes.map(function (checkbox) {
-//       return checkbox.dataset.name;
-//     });
-//     // saves the new array, selectedNames, to the local storage
-//   } strengthWorkout = strengthWorkout.concat(selectionNames);
-//   localStorage.setItem("strengthWorkout", JSON.stringify(strengthWorkout));
-//   location.replace("./weekly-planner.html");
-// });
-// }
+function renderSavedWorkouts() {
+  for (var i = 0; i < dayContainerEl.length; i++) {
+    // for (var j = 0; j < days[i].length; j++) {
+    // console.log(days[0][j]);
+    console.log(strengthWorkout[i]);
 
-
-
-
-  // mobile menu
-  // var burgerIconEl = document.querySelector("#burger");
-  // var navbarMenuEl = document.querySelector("#nav-links");
-
-  // burgerIconEl.addEventListener("click", () => {
-  //     navbarMenuEl.classList.toggle("is-active");
-  // });
-
-  // startBtnEl.addEventListener('click', )
-
-
-  // Select cardio workout category and display workout divs
-  var cardioSelections = document.querySelectorAll('input[name="selection"]');
-  var selectedValue;
-
-  for (var i = 0; i < cardioSelections.length; i++) {
-    cardioSelections[i].onclick = function () {
-      for (var cardioSelection of cardioSelections) {
-        if (cardioSelection.checked) {
-          selectedValue = cardioSelection.value;
-        }
-        if (selectedValue === "speed") {
-          speedShowEl.setAttribute("style", "display: show");
-          hiitShowEl.setAttribute("style", "display: none");
-          distanceShowEl.setAttribute("style", "display: none");
-        }
-        if (selectedValue === "distance") {
-          speedShowEl.setAttribute("style", "display: none");
-          hiitShowEl.setAttribute("style", "display: none");
-          distanceShowEl.setAttribute("style", "display: show");
-        }
-        if (selectedValue === "hiit") {
-          speedShowEl.setAttribute("style", "display: none");
-          hiitShowEl.setAttribute("style", "display: show");
-          distanceShowEl.setAttribute("style", "display: none");
-        }
+    // if statement 
+    if (strengthWorkout[i].length) {
+      console.log("here");
+      var cardContent = dayContainerEl[i].querySelector(".day-card-content");
+      // dayContainerEl[i]?.classList.remove("hide");
+      for (var workout of strengthWorkout[i]) {
+        var liEl = document.createElement("li");
+        liEl.textContent = workout;
+        cardContent?.appendChild(liEl);
+      }
+    }
+    if (cardioWorkout[i].length) {
+      console.log("here");
+      var cardContent = dayContainerEl[i].querySelector(".day-card-content");
+      // dayContainerEl[i]?.classList.remove("hide");
+      for (var workout of cardioWorkout[i]) {
+        var liEl = document.createElement("li");
+        liEl.textContent = workout;
+        cardContent?.appendChild(liEl);
       }
     }
   }
+}
 
-  //Get the button:
-  mybutton = document.getElementById("myBtn");
+//mobile menu
+var burgerIconEl = document.querySelector("#burger");
+var navbarMenuEl = document.querySelector("#nav-links");
 
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () { scrollFunction() };
+burgerIconEl.addEventListener("click", () => {
+  navbarMenuEl.classList.toggle("is-active");
+});
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
+// Select cardio workout category and display workout divs
+var cardioSelections = document.querySelectorAll('input[name="selection"]');
+var selectedValue;
+
+for (var i = 0; i < cardioSelections.length; i++) {
+  var speedShowEl = document.querySelector("#speed-show");
+  var hiitShowEl = document.querySelector("#hiit-show");
+  var distanceShowEl = document.querySelector("#distance-show");
+
+  cardioSelections[i].onclick = function () {
+    for (var cardioSelection of cardioSelections) {
+      if (cardioSelection.checked) {
+        selectedValue = cardioSelection.value;
+      }
+      if (selectedValue === "speed") {
+        speedShowEl.setAttribute("style", "display: show");
+        hiitShowEl.setAttribute("style", "display: none");
+        distanceShowEl.setAttribute("style", "display: none");
+      }
+      if (selectedValue === "distance") {
+        speedShowEl.setAttribute("style", "display: none");
+        hiitShowEl.setAttribute("style", "display: none");
+        distanceShowEl.setAttribute("style", "display: show");
+      }
+      if (selectedValue === "hiit") {
+        speedShowEl.setAttribute("style", "display: none");
+        hiitShowEl.setAttribute("style", "display: show");
+        distanceShowEl.setAttribute("style", "display: none");
+      }
     }
   }
+}
 
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybuttonEl.style.display = "block";
+  } else {
+    mybuttonEl.style.display = "none";
   }
+}
 
-  // inspirational quotes in hero banner
-  var quoteBank = [
-    "'The pain you feel today, will be the strength you feel tomorrow.'",
-    "'Do something today that your future self will thank you for.'",
-    "'When you feel like quitting, think of why you started.'",
-    "'You are worth it. Keep going.'",
-    "'All progress takes place outside the comfort zone.'",
-    "'Stay patient and trust your journey.'",
-    "'The key to success is to focus on goals, not obstacles.'",
-    "'Don't limit your challenges. Challenge your limits.'",
-    "'The distance between your dreams and reality is called action.'",
-    "'One day or day one. You decide.'",
-    "'Difficult roads often lead to beautiful destinations.'",
-    "'Be yourself. Everyone else is already taken.'",
-    "'Strive for progress, not perfection.'",
-    "'Believe you can, and you're halfway there.'",
-    "'Each morning we are born again. What we do today matters most.'",
-    "'Take a deep breath and remember that where you are now isn't where you are going to end up.'",
-    "'Let us make our future now, and let us make our dreams tomorrow's reality.'",
-  ];
+// inspirational quotes in hero banner
+function newQuote() {
+  var randomNumber = Math.floor(Math.random() * quoteBank.length);
+  document.getElementById("quoteDisplay").innerHTML = quoteBank[randomNumber];
+}
 
-
-
-  function newQuote() {
-    var randomNumber = Math.floor(Math.random() * quoteBank.length);
-    document.getElementById("quoteDisplay").innerHTML = quoteBank[randomNumber];
+dayButtonsEl?.addEventListener("click", function (event) {
+  event.preventDefault();
+  var element = event.target;
+  var index = element.dataset.index;
+  if (element.matches('button')) {
+    var checkedBoxes = document.querySelectorAll('#labelId input[type=checkbox]:checked');
+    var selectedCheckboxes = Array.from(checkedBoxes);
+    var selectionNames = selectedCheckboxes.map(function (checkbox) {
+      return checkbox.dataset.name;
+    });
+    // saves the new array, selectedNames, to the local storage
+    strengthWorkout[index] = selectionNames;
+    localStorage.setItem("strengthWorkout", JSON.stringify(strengthWorkout));
+    for (var checkedBox of checkedBoxes) {
+      checkedBox.checked = false;
+    }
+    // location.replace("./weekly-planner.html");
+    strengthModalEl.style.display = "block";
   }
+});
 
-  newQuote();
+// save cardio workout selection to local storage after clicking Save Workout button
+function openDaysModal(title) {
+  modalEl.style.display = "block";
+  modalEl.dataset.title = title;
+}
 
+function saveCardioWorkout(event) {
+  event.preventDefault();
+  var element = event.target;
+  if (element.matches('.cardio-save-button')) {
+    console.log("Hello");
 
-  const chosenBtnEl = document.querySelector("#chosen-button");
-  chosenBtnEl?.addEventListener("click", (getSelectedCheckboxValues));
+    var cardioTitle = element.closest(".card").querySelector(".cardio-title").textContent.trim();
+    console.log(cardioTitle);
+    openDaysModal(cardioTitle);
+  }
+}
+
+function pickDateButton(event) {
+  event.preventDefault();
+  var element = event.target;
+  if (element.matches('.date-button')) {
+    console.log("Hello");
+
+    var cardioTitle = element.closest(".modal").dataset.title.trim();
+    console.log(cardioTitle);
+    var index = element.dataset.index;
+    cardioWorkout[index] = cardioWorkout[index].concat(cardioTitle);
+    localStorage.setItem("cardioWorkout", JSON.stringify(cardioWorkout));
+    secondModalEl.style.display = "block";
+    modalEl.style.display = "none";
+  }
+}
+
+//close modal with x or by clicking the background
+// window.onclick = function (event) {
+//   if (event.target.className == 'modal-background') {
+//     modalEl.style.display = "none";
+//     secondModalEl.style.display = "none";
+//   }
+// }
+
+function strengthModalClose(event) {
+  event.preventDefault();
+  if (event.target.className == 'modal-background') {
+    strengthModalEl.style.display = "none";
+  }
+}
+
+function cardioDaysModalClose(event) {
+  event.preventDefault();
+  if (event.target.className == 'modal-background') {
+    modalEl.style.display = "none";
+  }
+}
+
+function secondModalClose(event) {
+  event.preventDefault();
+  if (event.target.className == 'modal-background') {
+    secondModalEl.style.display = "none";
+  }
+}
+
+modalEl?.addEventListener('click', cardioDaysModalClose);
+secondModalEl?.addEventListener('click', secondModalClose);
+strengthModalEl?.addEventListener('click', strengthModalClose);
+workoutWrapperEl?.addEventListener('click', saveCardioWorkout);
+modalEl?.addEventListener('click', pickDateButton);
+
+const chosenBtnEl = document.querySelector("#chosen-button");
+chosenBtnEl?.addEventListener("click", (getSelectedCheckboxValues));

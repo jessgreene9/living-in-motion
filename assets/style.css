@@ -8,7 +8,7 @@
 }
 
 #quoteDisplay {
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   margin-top: 50px;
   color: white;
@@ -190,6 +190,7 @@ input[type="radio"] {
   #chosen-button {
       border-radius: 5px;
       background-color: rgb(224, 223, 235);
+      position: relative;
   }
 
 #cardio-text {
@@ -207,8 +208,90 @@ input[type="radio"] {
     align-items: center;
     height: 100px;
     background-color: rgb(224, 223, 235);
+    font-size: 20px;
 }
 
 #list-of-exercises {
     color:rgb(34, 33, 33)
 }
+
+.cardio-save-button {
+  background-color: transparent;
+  cursor: pointer;
+  color:#333;
+  border: 0;
+  font-size: 16px;
+}
+
+.modal-card-title {
+  line-height: 30px;
+}
+
+.modal-card-head {
+  background-color: rgb(173,216,230);
+  padding: 10px;
+}
+
+.modal-card-foot, .modal-card-head {
+  display: flex;
+  justify-content: center;
+}
+
+.card-header {
+  background-color: transparent;
+  align-items: stretch;
+  box-shadow: 0 0.125em 0.25em rgb(10 10 10 / 10%);
+  display: flex;
+  justify-content: center;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 8px;
+}
+
+#exercise-container {
+
+    display: flex;
+    justify-content: center;
+}
+
+#saved-workout-card {
+  min-height: 250px;
+}
+
+  /* .button-text {
+    transition: all 0.2s;
+  }
+
+  .button--loading  .button-text {
+    visibility: hidden;
+    opacity: 0;
+  } */
+/* 
+  .button--loading::after {
+    content: "";
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: button--loading-spinner 1s linear infinite;
+  } */
+/* 
+  @keyframes button--loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+
+    to {
+      transform: rotate(1turn);
+    }
+  } */
