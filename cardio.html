@@ -21,7 +21,7 @@
     <nav class="navbar has-shadow is-white">
         <!-- logo / brand -->
         <div class="navbar-brand" id="home">
-            <a href="#" class="navbar-item">
+            <a href="./homepage.html" class="navbar-item">
                 <img src="./assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 70px" />
             </a>
             <a class="navbar-burger" id="burger">
@@ -50,7 +50,8 @@
                         </span>Living In Motion
                     </a>
                 </li>
-                <li class="is-active has-text-weight-bold"><a href="./cardio.html" aria-current="page"><span class="icon is small">
+                <li class="is-active has-text-weight-bold"><a href="./cardio.html" aria-current="page"><span
+                            class="icon is small">
                             <i class="fa fa-running" aria-current="hidden">
                             </i>
                         </span><span>Cardio Training Workouts</span></a></li>
@@ -83,27 +84,34 @@
             <form id="cardio-form">
                 <div class="columns">
                     <div class="column">
-                        
-                            <input type="radio" id="hiit" name="selection" value="hiit">
-                            <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
-                                for="hiit"><div id="cardio-card" class="card">High
-                                Intensity Interval Training</div></label>
-                        
+
+                        <input type="radio" id="hiit" name="selection" value="hiit">
+                        <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold"
+                            id="cardio-text" for="hiit">
+                            <div id="cardio-card" class="card">High
+                                Intensity Interval Training
+                            </div>
+                        </label>
+
                     </div>
                     <div class="column">
-                        
-                            <input type="radio" id="speed" name="selection" value="speed">
-                            <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
-                                for="speed"><div id="cardio-card" class="card">Speed
-                                Training</div></label>
-                        
+
+                        <input type="radio" id="speed" name="selection" value="speed">
+                        <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold"
+                            id="cardio-text" for="speed">
+                            <div id="cardio-card" class="card">Speed
+                                Training</div>
+                        </label>
+
                     </div>
                     <div class="column">
-                        
-                            <input type="radio" id="distance" name="selection" value="distance">
-                            <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold" id="cardio-text"
-                                for="distance"><div id="cardio-card" class="card">Distance Training</div></label>
-                        
+
+                        <input type="radio" id="distance" name="selection" value="distance">
+                        <label id="cardio-label" class="has-text-centered has-text-darkgrey has-text-weight-bold"
+                            id="cardio-text" for="distance">
+                            <div id="cardio-card" class="card">Distance Training</div>
+                        </label>
+
                     </div>
                 </div>
                 <!-- <div id="centered">
@@ -114,13 +122,13 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section workout-wrapper">
         <div class="container" id="hiit-show" style="display:none">
             <div class="columns is-multiline">
                 <div class="column is-one-half">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title is-size-4 is-centered">
+                            <p class="cardio-title is-centered is-size-5 has-text-weight-bold ">
                                 Burpee Interval HIIT Workout
                             </p>
                         </header>
@@ -145,14 +153,14 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
+                            <button type="submit" class="cardio-save-button card-footer-item">Save Workout</button>
                         </footer>
                     </div>
                 </div>
                 <div class="column is-one-half">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title is-centered is-size-4">
+                            <p class="cardio-title is-centered is-size-5 has-text-weight-bold">
                                 The 20/20 Full-Body Cardio HIIT Workout
                             </p>
                         </header>
@@ -176,7 +184,7 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
+                            <button type="submit" class="cardio-save-button card-footer-item">Save Workout</button>
                         </footer>
                     </div>
                 </div>
@@ -188,7 +196,7 @@
                 <div class="column is-one-half">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title is-centered is-size-4">
+                            <p class="cardio-title is-centered is-size-5">
                                 The Easy Run
                             </p>
                         </header>
@@ -206,14 +214,14 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
+                            <button type="submit" class="cardio-save-button card-footer-item">Save Workout</button>
                         </footer>
                     </div>
                 </div>
                 <div class="column is-one-half">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title is-centered is-size-4">
+                            <p class="cardio-title is-centered is-size-5 has-text-weight-bold">
                                 Tempo Run
                             </p>
                         </header>
@@ -231,7 +239,7 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
+                            <button type="submit" class="cardio-save-button card-footer-item">Save Workout</button>
                         </footer>
                     </div>
                 </div>
@@ -243,7 +251,7 @@
                 <div class="column is-one-half">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title is-centered is-size-4">
+                            <p class="cardio-title is-centered is-size-5 has-text-weight-bold">
                                 Ladder Workout
                             </p>
                         </header>
@@ -268,14 +276,14 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
+                            <button type="submit" class="cardio-save-button card-footer-item">Save Workout</button>
                         </footer>
                     </div>
                 </div>
                 <div class="column is-one-half">
                     <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-4">
+                        <header class="card-header has-text-centered">
+                            <p class="cardio-title is-centered is-size-5 has-text-weight-bold">
                                 Hill Sprint Workout
                             </p>
                         </header>
@@ -293,10 +301,67 @@
                             </div>
                         </div>
                         <footer class="card-footer">
-                            <a href="#" class="card-footer-item">Save</a>
+                            <button type="submit" class="cardio-save-button card-footer-item">Save Workout</button>
                         </footer>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="modal" id="second-modal">
+            <div class="modal-background"></div>
+            <div class="section">
+                <div class="modal-card has-text-centered">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title has-text-centered is-size-5 has-text-weight-bold">Great, your workout was saved! <br> What would you like to do next?</p>
+                        <!-- <button class="delete" aria-label="close"></button> -->
+                    </header>
+                    <footer id="modal-next" class="modal-card-foot">
+                        <a class="button is-size-6 p-5" onclick="location.replace('./cardio.html')">Schedule More <br> Cardio
+                                Workouts</a>
+                        <a class="button is-size-6 p-5" onclick="location.replace('./strength-training.html')">Schedule Strength <br>
+                                Training Workouts</a>
+                        <a class="button is-size-6 p-5" onclick="location.replace('./weekly-planner.html')">View Weekly <br>
+                                Planner</a>
+                    </footer>
+                </div>
+                <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+            </div>
+        </div>
+
+        <div class="modal" id="page-modal">
+            <div class="modal-background"></div>
+            <div class="section modal-wrap">
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title has-text-centered">Select a day for your workout</p>
+                        <!-- <button class="delete" aria-label="close"></button> -->
+                    </header>
+                    <footer class="modal-card-foot show" id="cardio-day-buttons">
+                        <button class="button date-button is-size-7 has-text-weight-bold" data-index="0" id="0" type="submit" name="submit"
+                            value="0">Sunday
+                        </button>
+                        <button class="button date-button is-size-7 has-text-weight-bold" data-index="1" id="1" type="submit" name="submit"
+                            value="1">Monday
+                        </button>
+                        <button class="button date-button is-size-7 has-text-weight-bold" data-index="2" id="2" type="submit" name="submit"
+                            value="2">Tuesday
+                        </button>
+                        <button class="button date-button is-size-7 has-text-weight-bold" data-index="3" id="3" type="submit" name="submit"
+                            value="3">Wednesday
+                        </button>
+                        <button class="button date-button is-size-7 has-text-weight-bold" data-index="4" id="4" type="submit" name="submit"
+                            value="4">Thursday
+                        </button>
+                        <button class="button date-button is-size-7 has-text-weight-bold" data-index="5" id="5" type="submit" name="submit"
+                            value="5">Friday
+                        </button>
+                        <button class="button date-button is-size-7 has-text-weight-bold" data-index="6" id="6" type="submit" name="submit"
+                            value="6">Saturday
+                        </button>
+                    </footer>
+                </div>
+                <!-- <button class="modal-close is-large" aria-label="close"></button> -->
             </div>
         </div>
     </section>
@@ -316,29 +381,30 @@
                 </div>
                 <div class="column is-3">
                     <h1 id="page-links" class="is-size-5">Explore</h1>
-                    <a  class="has-text-grey" href="#home">Home</a><br>
-                    <a  class="has-text-grey" href="./cardio.html">Cardio Training Workouts</a><br>
-                    <a  class="has-text-grey" href="./strength-training.html">Strength Training Workouts</a><br>
-                    <a  class="has-text-grey" href="./weekly-planner.html">Weekly Planner</a>
+                    <a class="has-text-grey" href="#home">Home</a><br>
+                    <a class="has-text-grey" href="./cardio.html">Cardio Training Workouts</a><br>
+                    <a class="has-text-grey" href="./strength-training.html">Strength Training Workouts</a><br>
+                    <a class="has-text-grey" href="./weekly-planner.html">Weekly Planner</a>
                 </div>
                 <div class="column is-2">
                     <h1 class="is-size-5" id="connect">Connect</h1>
                     <h2>Jess Greene</h2>
                     <ul id="page-links">
                         <li>
-                            <a  class="has-text-grey" href="https://github.com/jessgreene9">GitHub</a>
+                            <a class="has-text-grey" href="https://github.com/jessgreene9">GitHub</a>
                         </li>
                         <li>
-                            <a  class="has-text-grey" href="http://www.linkedin.com/in/jess-greene-241139211">LinkedIn</a>
+                            <a class="has-text-grey"
+                                href="http://www.linkedin.com/in/jess-greene-241139211">LinkedIn</a>
                         </li>
                     </ul><br>
                     <h2>Alexandra Hurst</h2>
                     <ul>
                         <li>
-                            <a  class="has-text-grey" href="https://github.com/AlNHurst">Github</a>
+                            <a class="has-text-grey" href="https://github.com/AlNHurst">Github</a>
                         </li>
                         <li>
-                            <a  class="has-text-grey" href="www.linkedin.com/in/alexandra-hurst-28b185130">LinkedIn</a>
+                            <a class="has-text-grey" href="www.linkedin.com/in/alexandra-hurst-28b185130">LinkedIn</a>
                         </li>
                     </ul>
                 </div>

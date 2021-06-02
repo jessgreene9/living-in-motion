@@ -20,7 +20,7 @@
     <nav class="navbar has-shadow is-white">
         <!-- logo / brand -->
         <div class="navbar-brand" id="home">
-            <a href="#" class="navbar-item">
+            <a href="./homepage.html" class="navbar-item">
                 <img src="./assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 70px" />
             </a>
             <a class="navbar-burger" id="burger">
@@ -152,74 +152,80 @@
                 </div>
                 <div class="columns">
                     <div id="centered" class="column is-centered">
-                        <input class="button is-medium has-text-darkgrey has-text-weight-bold" id="chosen-button"
-                            type="submit" name="submit" value="Proceed to Exercises" />
+                        <button class="button button--loading is-medium has-text-darkgrey has-text-weight-bold" id="chosen-button"
+                            type="submit"><span class="button-text">Proceed To Exercises</span></button>
+                            
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <section class="section">
         <div class="container" id="exercise-container">
             <div class="card">
-                <h1 id="exercise-heading" class="hide is-size-4 has-text-centered has-text-weight-bold mt-3 pt-3">Select
-                    exercises to add to your workout</h1>
+                <div class="card-header my-3">
+                    <h1 id="exercise-heading" class="hide is-size-5 has-text-centered has-text-weight-bold">
+                        Select exercises to add to your workout</h1>
+                </div>
                 <div class="is-size-6" id="list-of-exercises">
                 </div>
                 <h1 class="hide" id="planner-heading">Select
                     the Day
                 </h1>
                 <div id="day-buttons" class="hide">
-                    <div class="columns">
-                        <div class="column">
-                            <button
-                                class="button is-medium has-background-dark has-text-white has-text-weight-bold mb-6"
-                                data-index="0" id="0" type="submit" name="submit" value="0">Sunday
-                            </button>
-                        </div>
+                    <div class="card-footer">
+                        <button class="button has-background-dark has-text-white" data-index="0" id="0" type="submit"
+                            name="submit" value="0">Sunday
+                        </button>
 
-                        <div class="column">
-                            <button
-                                class="button is-medium has-background-dark has-text-white has-text-weight-bold mb-6"
-                                data-index="1" id="1" type="submit" name="submit" value="1">Monday
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button
-                                class="button is-medium has-background-dark has-text-white has-text-weight-bold mb-6"
-                                data-index="2" id="2" type="submit" name="submit" value="2">Tuesday
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button
-                                class="button is-medium has-background-dark has-text-white has-text-weight-bold mb-6"
-                                data-index="3" id="3" type="submit" name="submit" value="3">Wednesday
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button
-                                class="button is-medium has-background-dark has-text-white has-text-weight-bold mb-6"
-                                data-index="4" id="4" type="submit" name="submit" value="4">Thursday
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button
-                                class="button is-medium has-background-dark has-text-white has-text-weight-bold mb-6"
-                                data-index="5" id="5" type="submit" name="submit" value="5">Friday
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button
-                                class="button is-medium has-background-dark has-text-white has-text-weight-bold mb-6"
-                                data-index="6" id="6" type="submit" name="submit" value="6">Saturday
-                            </button>
-                        </div>
+                        <button class="button has-background-dark has-text-white" data-index="1" id="1" type="submit"
+                            name="submit" value="1">Monday
+                        </button>
+                        <button class="button has-background-dark has-text-white" data-index="2" id="2" type="submit"
+                            name="submit" value="2">Tuesday
+                        </button>
+                        <button class="button has-background-dark has-text-white" data-index="3" id="3" type="submit"
+                            name="submit" value="3">Wednesday
+                        </button>
+                        <button class="button has-background-dark has-text-white" data-index="4" id="4" type="submit"
+                            name="submit" value="4">Thursday
+                        </button>
+                        <button class="button has-background-dark has-text-white" data-index="5" id="5" type="submit"
+                            name="submit" value="5">Friday
+                        </button>
+                        <button class="button has-background-dark has-text-white" data-index="6" id="6" type="submit"
+                            name="submit" value="6">Saturday
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="modal" id="strength-modal">
+        <div class="modal-background"></div>
+        <div class="section">
+            <div class="modal-card has-text-centered">
+                <header class="modal-card-head">
+                    <p class="modal-card-title has-text-centered is-size-5 has-text-weight-bold">Excellent! Your workout was
+                        saved! <br> What would you like to do next?</p>
+                    <!-- <button class="delete" aria-label="close"></button> -->
+                </header>
+                <footer id="modal-next" class="modal-card-foot">
+                    <a class="button is-size-6 p-5" onclick="location.replace('./cardio.html')">Schedule Cardio <br>
+                        Training
+                        Workouts</a>
+                    <a class="button is-size-6 p-5" onclick="location.replace('./strength-training.html')">Schedule More
+                        Strength <br>
+                        Training Workouts</a>
+                    <a class="button is-size-6 p-5" onclick="location.replace('./weekly-planner.html')">View Weekly <br>
+                        Planner</a>
+                </footer>
+            </div>
+            <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+        </div>
+    </div>
 
     <footer class="footer has-background-white">
         <div class="container">
