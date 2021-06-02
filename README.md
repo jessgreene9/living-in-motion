@@ -38,7 +38,7 @@ This application allows the user to design their own workouts and save them loca
 
 ## Screenshots
 
-![]()
+![LivingInMotionGif](https://github.com/jessgreene9/living-in-motion/blob/main/assets/images/LivingInMotion%20Animation.gif)
 
 
 
