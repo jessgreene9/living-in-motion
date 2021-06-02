@@ -36,7 +36,7 @@ From any page in the application, the user can easily navigate back to homepage,
 
 ## Screenshots
 
-<img src="./assets/images/screenshot-weather.png">
+
 
 
 
@@ -48,9 +48,9 @@ JavaScript
 
 ## Credits
 
-Alexandra Hurst
+Alexandra Hurst 
 
-Jess Greene
+Jess Greene 
 
 
 
