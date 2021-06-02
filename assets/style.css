@@ -202,7 +202,7 @@ input[type="radio"] {
 }
 
 #list-of-exercises {
-    color:rgb(34, 33, 33)
+    color:rgb(34, 33, 33);
 }
 
 .cardio-save-button {
@@ -287,8 +287,9 @@ input[type="radio"] {
 }
 
 #planner-text {
-  color: lightblue;
+  color: #333;
   box-shadow: -12px -12px 5px rgb(34, 33, 33);
+  background-color: rgb(202, 224, 231);
 }
 
 
