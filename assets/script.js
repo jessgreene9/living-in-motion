@@ -123,7 +123,7 @@ function renderCollection(collection) {
   var listOfExercisesEl = document.querySelector("#list-of-exercises");
   for (var c = 0; c < collection.length; c++) {
     var shuffledExercises = _.shuffle(collection[c].results);
-    var slicedExercises = shuffledExercises.slice(0, 10);
+    var slicedExercises = shuffledExercises.slice(0, 15);
     console.log(slicedExercises);
 
     for (var i = 0; i < slicedExercises.length; i++) {
