@@ -289,14 +289,6 @@ function pickDateButton(event) {
   }
 }
 
-//close modal with x or by clicking the background
-// window.onclick = function (event) {
-//   if (event.target.className == 'modal-background') {
-//     modalEl.style.display = "none";
-//     secondModalEl.style.display = "none";
-//   }
-// }
-
 function strengthModalClose(event) {
   event.preventDefault();
   if (event.target.className == 'modal-background') {
