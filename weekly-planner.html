@@ -20,8 +20,8 @@
     <nav class="navbar has-shadow is-white">
         <!-- logo / brand -->
         <div class="navbar-brand" id="home">
-            <a href="./homepage.html" class="navbar-item">
-                <img src="./assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 70px" />
+            <a href="#" class="navbar-item">
+                <img src="./assets/images/living-in-motion-logo.JPG" alt="Brand logo" style="max-height: 50px" />
             </a>
             <a class="navbar-burger" id="burger">
                 <span></span>
@@ -31,9 +31,9 @@
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <a class="navbar-item is-size-5 px-4" href="./homepage.html">Design A Workout</a>
-                <a class="navbar-item is-size-5 px-4" href="./weekly-planner.html">Weekly Planner</a>
-                <a class="navbar-item is-size-5 mx-2" href="#connect">Connect</a>
+                <a class="navbar-item is-size-6 px-4" href="#design-a-workout">Design A Custom Workout</a>
+                <a class="navbar-item is-size-6 px-4" href="./weekly-planner.html">Weekly Planner</a>
+                <a class="navbar-item is-size-6 mx-2" href="#connect">Connect</a>
             </div>
         </div>
     </nav>
@@ -42,7 +42,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul class="container">
                 <li>
-                    <a href="./homepage.html" class="has-text-grey">
+                    <a href="./index.html" class="has-text-grey">
                         <span class="icon is small">
                             <i class="fa fa-home" aria-current="hidden">
                             </i>
@@ -74,228 +74,124 @@
         </div>
     </header>
 
-    <section class="section" id="weekly-planner">
-        <div class="container">
-            <h1 id="planner-text" class="title has-text-centered has-text-white is-size-2 pb-2">Weekly Planner</h1>
-            <div class="columns">
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Sunday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                        <div id="storage-sunday" class="display-none">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Monday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure id="storage-monday" class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Tuesday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure id="storage-tuesday" class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Wednesday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure id="storage-wednesday" class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Thursday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure id="storage-thursday" class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Friday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure id="storage-friday" class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="day-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                                Saturday
-                            </p>
-                        </header>
-                        <div class="card-image">
-                            <figure id="storage-saturday" class="image is-1by1">
-                                <a href="#" alt="Placeholder image"></a>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-<div id= "weather-container">
-    <div class="search-city">
-        <label>Get Your City's Forecast:</label>
-        <div class="search-content">
-            <form class="search-form">
-                <input id="input-city" type="text" placeholder="Search City" />
+    <section>
+        <div id="weather-container">
+            <div class="search-city">
+                <label>Get Your City's Forecast:</label>
                 <div class="search-content">
-                    <button id="searchBtn">Search</button>
+                    <form class="search-form">
+                        <input id="input-city" type="text" placeholder="Search City" />
+                        <div class="search-content">
+                            <button id="searchBtn">Search</button>
+                        </div>
+                    </form>
+                    <div class="sevenDay">
+                        <div id="sevenDayContainers">
+                        </div>
+                    </div>
                 </div>
-            </form>
-            <div class="sevenDay">
-                <div id="sevenDayContainers"></div>
             </div>
         </div>
-
-</div>
-
     </section>
 
-    <section class="section">
-        <container class="container">
-            <div id="day-container" class="columns is-multiline">
-                <div id="sunday-hide" class="hide column is-6">
-                    <div id="saved-workout-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-5">
-                                Sunday's Workout
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <ul class="day-card-content list">
-                            </ul>
+    <section class="section" id="weekly-planner">
+        <div class="container">
+            <h1 id="planner-text" class="title has-text-centered is-size-3 pb-2">Weekly Planner</h1>
+            <container class="container">
+                <div id="day-container" class="columns is-multiline">
+                    <div class="column is-6">
+                        <div id="saved-workout-card" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered is-size-5">
+                                    Sunday's Workout
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <ul class="day-card-content list">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div id="saved-workout-card" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered is-size-5">
+                                    Monday's Workout
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <ul class="day-card-content">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div id="saved-workout-card" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered is-size-5">
+                                    Tuesday's Workout
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <ul class="day-card-content">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div id="saved-workout-card" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered is-size-5">
+                                    Wednesday's Workout
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <ul class="day-card-content">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div id="saved-workout-card" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered is-size-5">
+                                    Thursday's Workout
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <ul class="day-card-content">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div id="saved-workout-card" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered is-size-5">
+                                    Friday's Workout
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <ul class="day-card-content">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div id="saved-workout-card" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title is-centered is-size-5">
+                                    Saturday's Workout
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <ul class="day-card-content">
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="hide column is-6">
-                    <div id="saved-workout-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-5">
-                                Monday's Workout
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <ul class="day-card-content">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="hide column is-6">
-                    <div id="saved-workout-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-5">
-                                Tuesday's Workout
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <ul class="day-card-content">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="hide column is-6">
-                    <div id="saved-workout-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-5">
-                                Wednesday's Workout
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <ul class="day-card-content">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="hide column is-6">
-                    <div id="saved-workout-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-5">
-                                Thursday's Workout
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <ul class="day-card-content">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="hide column is-6">
-                    <div id="saved-workout-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-5">
-                                Friday's Workout
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <ul class="day-card-content">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="hide column is-6">
-                    <div id="saved-workout-card" class="card">
-                        <header class="card-header">
-                            <p class="card-header-title is-centered is-size-5">
-                                Saturday's Workout
-                            </p>
-                        </header>
-                        <div class="card-content">
-                            <ul class="day-card-content">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </container>
+            </container>
     </section>
 
 
