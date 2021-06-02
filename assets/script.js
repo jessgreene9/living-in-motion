@@ -289,13 +289,6 @@ function pickDateButton(event) {
   }
 }
 
-function strengthModalClose(event) {
-  event.preventDefault();
-  if (event.target.className == 'modal-background') {
-    strengthModalEl.style.display = "none";
-  }
-}
-
 function cardioDaysModalClose(event) {
   event.preventDefault();
   if (event.target.className == 'modal-background') {
@@ -303,16 +296,8 @@ function cardioDaysModalClose(event) {
   }
 }
 
-function secondModalClose(event) {
-  event.preventDefault();
-  if (event.target.className == 'modal-background') {
-    secondModalEl.style.display = "none";
-  }
-}
 
 modalEl?.addEventListener('click', cardioDaysModalClose);
-secondModalEl?.addEventListener('click', secondModalClose);
-strengthModalEl?.addEventListener('click', strengthModalClose);
 workoutWrapperEl?.addEventListener('click', saveCardioWorkout);
 modalEl?.addEventListener('click', pickDateButton);
 
